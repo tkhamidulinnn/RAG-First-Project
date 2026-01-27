@@ -1,0 +1,136 @@
+model,similarity,query,expected,hit@3,mrr,topic_acc@3
+MiniLM,cosine,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MiniLM,dot_product,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MiniLM,euclidean,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MiniLM,cosine,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MiniLM,dot_product,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MiniLM,euclidean,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MiniLM,cosine,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MiniLM,dot_product,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MiniLM,euclidean,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MiniLM,cosine,How to create a git branch?,GIT,1.0,1.0,1.0
+MiniLM,dot_product,How to create a git branch?,GIT,1.0,1.0,1.0
+MiniLM,euclidean,How to create a git branch?,GIT,1.0,1.0,1.0
+MiniLM,cosine,What is git rebase?,GIT,1.0,1.0,1.0
+MiniLM,dot_product,What is git rebase?,GIT,1.0,1.0,1.0
+MiniLM,euclidean,What is git rebase?,GIT,1.0,1.0,1.0
+MiniLM,cosine,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MiniLM,dot_product,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MiniLM,euclidean,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MiniLM,cosine,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MiniLM,dot_product,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MiniLM,euclidean,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MiniLM,cosine,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MiniLM,dot_product,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MiniLM,euclidean,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MiniLM,cosine,What are GCP security features?,GCP,1.0,1.0,1.0
+MiniLM,dot_product,What are GCP security features?,GCP,1.0,1.0,1.0
+MiniLM,euclidean,What are GCP security features?,GCP,1.0,1.0,1.0
+MPNet,cosine,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MPNet,dot_product,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MPNet,euclidean,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+MPNet,cosine,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MPNet,dot_product,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MPNet,euclidean,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+MPNet,cosine,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MPNet,dot_product,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MPNet,euclidean,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+MPNet,cosine,How to create a git branch?,GIT,1.0,1.0,1.0
+MPNet,dot_product,How to create a git branch?,GIT,1.0,1.0,1.0
+MPNet,euclidean,How to create a git branch?,GIT,1.0,1.0,1.0
+MPNet,cosine,What is git rebase?,GIT,1.0,1.0,1.0
+MPNet,dot_product,What is git rebase?,GIT,1.0,1.0,1.0
+MPNet,euclidean,What is git rebase?,GIT,1.0,1.0,1.0
+MPNet,cosine,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MPNet,dot_product,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MPNet,euclidean,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+MPNet,cosine,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MPNet,dot_product,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MPNet,euclidean,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+MPNet,cosine,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MPNet,dot_product,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MPNet,euclidean,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+MPNet,cosine,What are GCP security features?,GCP,1.0,1.0,1.0
+MPNet,dot_product,What are GCP security features?,GCP,1.0,1.0,1.0
+MPNet,euclidean,What are GCP security features?,GCP,1.0,1.0,1.0
+E5-base,cosine,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+E5-base,dot_product,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+E5-base,euclidean,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+E5-base,cosine,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+E5-base,dot_product,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+E5-base,euclidean,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+E5-base,cosine,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+E5-base,dot_product,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+E5-base,euclidean,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+E5-base,cosine,How to create a git branch?,GIT,1.0,1.0,1.0
+E5-base,dot_product,How to create a git branch?,GIT,1.0,1.0,1.0
+E5-base,euclidean,How to create a git branch?,GIT,1.0,1.0,1.0
+E5-base,cosine,What is git rebase?,GIT,1.0,1.0,1.0
+E5-base,dot_product,What is git rebase?,GIT,1.0,1.0,1.0
+E5-base,euclidean,What is git rebase?,GIT,1.0,1.0,1.0
+E5-base,cosine,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+E5-base,dot_product,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+E5-base,euclidean,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+E5-base,cosine,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+E5-base,dot_product,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+E5-base,euclidean,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+E5-base,cosine,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+E5-base,dot_product,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+E5-base,euclidean,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+E5-base,cosine,What are GCP security features?,GCP,1.0,1.0,1.0
+E5-base,dot_product,What are GCP security features?,GCP,1.0,1.0,1.0
+E5-base,euclidean,What are GCP security features?,GCP,1.0,1.0,1.0
+BGE-base,cosine,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+BGE-base,dot_product,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+BGE-base,euclidean,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+BGE-base,cosine,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+BGE-base,dot_product,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+BGE-base,euclidean,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+BGE-base,cosine,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+BGE-base,dot_product,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+BGE-base,euclidean,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+BGE-base,cosine,How to create a git branch?,GIT,1.0,1.0,1.0
+BGE-base,dot_product,How to create a git branch?,GIT,1.0,1.0,1.0
+BGE-base,euclidean,How to create a git branch?,GIT,1.0,1.0,1.0
+BGE-base,cosine,What is git rebase?,GIT,1.0,1.0,1.0
+BGE-base,dot_product,What is git rebase?,GIT,1.0,1.0,1.0
+BGE-base,euclidean,What is git rebase?,GIT,1.0,1.0,1.0
+BGE-base,cosine,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+BGE-base,dot_product,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+BGE-base,euclidean,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+BGE-base,cosine,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+BGE-base,dot_product,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+BGE-base,euclidean,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+BGE-base,cosine,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+BGE-base,dot_product,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+BGE-base,euclidean,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+BGE-base,cosine,What are GCP security features?,GCP,1.0,1.0,1.0
+BGE-base,dot_product,What are GCP security features?,GCP,1.0,1.0,1.0
+BGE-base,euclidean,What are GCP security features?,GCP,1.0,1.0,1.0
+GTE-base,cosine,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+GTE-base,dot_product,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+GTE-base,euclidean,What is retrieval augmented generation?,RAG,1.0,1.0,1.0
+GTE-base,cosine,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+GTE-base,dot_product,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+GTE-base,euclidean,How does HyDE improve retrieval?,RAG,1.0,1.0,1.0
+GTE-base,cosine,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+GTE-base,dot_product,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+GTE-base,euclidean,What are LangChain retrieval methods?,RAG,1.0,1.0,1.0
+GTE-base,cosine,How to create a git branch?,GIT,1.0,1.0,1.0
+GTE-base,dot_product,How to create a git branch?,GIT,1.0,1.0,1.0
+GTE-base,euclidean,How to create a git branch?,GIT,1.0,1.0,1.0
+GTE-base,cosine,What is git rebase?,GIT,1.0,1.0,1.0
+GTE-base,dot_product,What is git rebase?,GIT,1.0,1.0,1.0
+GTE-base,euclidean,What is git rebase?,GIT,1.0,1.0,1.0
+GTE-base,cosine,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+GTE-base,dot_product,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+GTE-base,euclidean,How to resolve merge conflicts?,GIT,1.0,1.0,1.0
+GTE-base,cosine,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+GTE-base,dot_product,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+GTE-base,euclidean,What is Google Cloud Platform?,GCP,1.0,1.0,1.0
+GTE-base,cosine,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+GTE-base,dot_product,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+GTE-base,euclidean,How to use gcloud CLI?,GCP,1.0,1.0,1.0
+GTE-base,cosine,What are GCP security features?,GCP,1.0,1.0,1.0
+GTE-base,dot_product,What are GCP security features?,GCP,1.0,1.0,1.0
+GTE-base,euclidean,What are GCP security features?,GCP,1.0,1.0,1.0

@@ -1,0 +1,46 @@
+,model,query,expected,hit@3,mrr
+0,MiniLM,What is retrieval augmented generation?,RAG,1.0,1.0
+1,MiniLM,How does HyDE improve retrieval?,RAG,1.0,1.0
+2,MiniLM,What are LangChain retrieval methods?,RAG,1.0,1.0
+3,MiniLM,How to create a git branch?,GIT,1.0,1.0
+4,MiniLM,What is git rebase?,GIT,1.0,1.0
+5,MiniLM,How to resolve merge conflicts?,GIT,1.0,1.0
+6,MiniLM,What is Google Cloud Platform?,GCP,1.0,1.0
+7,MiniLM,How to use gcloud CLI?,GCP,1.0,1.0
+8,MiniLM,What are GCP security features?,GCP,1.0,1.0
+9,MPNet,What is retrieval augmented generation?,RAG,1.0,1.0
+10,MPNet,How does HyDE improve retrieval?,RAG,1.0,1.0
+11,MPNet,What are LangChain retrieval methods?,RAG,1.0,1.0
+12,MPNet,How to create a git branch?,GIT,1.0,1.0
+13,MPNet,What is git rebase?,GIT,1.0,1.0
+14,MPNet,How to resolve merge conflicts?,GIT,1.0,1.0
+15,MPNet,What is Google Cloud Platform?,GCP,1.0,1.0
+16,MPNet,How to use gcloud CLI?,GCP,1.0,1.0
+17,MPNet,What are GCP security features?,GCP,1.0,1.0
+18,E5-base,What is retrieval augmented generation?,RAG,1.0,1.0
+19,E5-base,How does HyDE improve retrieval?,RAG,1.0,1.0
+20,E5-base,What are LangChain retrieval methods?,RAG,1.0,1.0
+21,E5-base,How to create a git branch?,GIT,1.0,1.0
+22,E5-base,What is git rebase?,GIT,1.0,1.0
+23,E5-base,How to resolve merge conflicts?,GIT,1.0,1.0
+24,E5-base,What is Google Cloud Platform?,GCP,1.0,1.0
+25,E5-base,How to use gcloud CLI?,GCP,1.0,1.0
+26,E5-base,What are GCP security features?,GCP,1.0,1.0
+27,BGE-base,What is retrieval augmented generation?,RAG,1.0,1.0
+28,BGE-base,How does HyDE improve retrieval?,RAG,1.0,1.0
+29,BGE-base,What are LangChain retrieval methods?,RAG,1.0,1.0
+30,BGE-base,How to create a git branch?,GIT,1.0,1.0
+31,BGE-base,What is git rebase?,GIT,1.0,1.0
+32,BGE-base,How to resolve merge conflicts?,GIT,1.0,1.0
+33,BGE-base,What is Google Cloud Platform?,GCP,1.0,1.0
+34,BGE-base,How to use gcloud CLI?,GCP,1.0,1.0
+35,BGE-base,What are GCP security features?,GCP,1.0,1.0
+36,GTE-base,What is retrieval augmented generation?,RAG,1.0,1.0
+37,GTE-base,How does HyDE improve retrieval?,RAG,1.0,1.0
+38,GTE-base,What are LangChain retrieval methods?,RAG,1.0,1.0
+39,GTE-base,How to create a git branch?,GIT,1.0,1.0
+40,GTE-base,What is git rebase?,GIT,1.0,1.0
+41,GTE-base,How to resolve merge conflicts?,GIT,1.0,1.0
+42,GTE-base,What is Google Cloud Platform?,GCP,1.0,1.0
+43,GTE-base,How to use gcloud CLI?,GCP,1.0,1.0
+44,GTE-base,What are GCP security features?,GCP,1.0,1.0

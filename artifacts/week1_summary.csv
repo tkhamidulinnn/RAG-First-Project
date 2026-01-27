@@ -1,0 +1,16 @@
+model,similarity,hit@3,mrr,topic_acc@3
+BGE-base,cosine,1.0,1.0,1.0
+BGE-base,dot_product,1.0,1.0,1.0
+BGE-base,euclidean,1.0,1.0,1.0
+E5-base,cosine,1.0,1.0,1.0
+E5-base,dot_product,1.0,1.0,1.0
+E5-base,euclidean,1.0,1.0,1.0
+GTE-base,cosine,1.0,1.0,1.0
+GTE-base,dot_product,1.0,1.0,1.0
+GTE-base,euclidean,1.0,1.0,1.0
+MPNet,cosine,1.0,1.0,1.0
+MPNet,dot_product,1.0,1.0,1.0
+MPNet,euclidean,1.0,1.0,1.0
+MiniLM,cosine,1.0,1.0,1.0
+MiniLM,dot_product,1.0,1.0,1.0
+MiniLM,euclidean,1.0,1.0,1.0
