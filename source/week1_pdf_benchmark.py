@@ -1,7 +1,6 @@
 # Week 1: PDF Embedding Benchmark
 # Evaluate embedding models on multi-topic PDF retrieval.
 # Focus: embeddings, similarity metrics, retrieval correctness.
-# NO LLM generation, NO reranking, NO advanced RAG.
 
 import numpy as np
 import pandas as pd

@@ -1,0 +1,163 @@
+chunk_size,overlap,model,query,expected,hit@1,hit@3,hit@5,mrr,top_topics,top1_score,gap_1_2
+200,20,MiniLM,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'HyDE', 'HyDE', 'RAG']",0.7669997215270996,0.2467864751815796
+200,20,MiniLM,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'Chunking', 'Evaluation']",0.5809216499328613,0.3321129083633423
+200,20,MiniLM,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'RAG', 'RAG']",0.7679013609886169,0.2207580804824829
+200,20,MiniLM,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.7298055291175842,0.11792570352554321
+200,20,MiniLM,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.7522113919258118,0.1401587724685669
+200,20,MiniLM,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.8872708678245544,0.37957412004470825
+200,20,MiniLM,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Embeddings', 'Embeddings', 'HyDE', 'Embeddings']",0.6213207244873047,0.03550577163696289
+200,20,MiniLM,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Embeddings', 'RAG', 'Evaluation', 'RAG']",0.591090202331543,0.10404825210571289
+200,20,MiniLM,What is FAISS and how does it work?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Chunking', 'Evaluation', 'Evaluation', 'Chunking']",0.25452667474746704,0.08100485801696777
+200,20,MiniLM,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'HyDE', 'VectorDB', 'VectorDB', 'RAG']",0.46611347794532776,0.15297311544418335
+200,20,MiniLM,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'HyDE', 'RAG', 'HyDE']",0.62940514087677,0.15953868627548218
+200,20,MiniLM,How does hypothetical document embedding improve search?,HyDE,0.0,1.0,1.0,0.5,"['Embeddings', 'HyDE', 'Embeddings', 'Embeddings', 'HyDE']",0.7112147808074951,0.09469330310821533
+200,20,MiniLM,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'Evaluation', 'HyDE', 'RAG']",0.6465587615966797,0.05804765224456787
+200,20,MiniLM,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'Evaluation', 'HyDE', 'VectorDB']",0.37033766508102417,0.08673503994941711
+200,20,MiniLM,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Chunking', 'Chunking']",0.5268526077270508,0.059068262577056885
+200,20,MiniLM,Does overlap always improve retrieval precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Evaluation', 'HyDE', 'Chunking', 'RAG']",0.4081434905529022,0.003962278366088867
+200,20,MiniLM,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Embeddings', 'RAG', 'RAG', 'VectorDB']",0.3296844959259033,0.012189328670501709
+200,20,MiniLM,When is updating model weights better than external retrieval?,RAG,0.0,1.0,1.0,0.5,"['Embeddings', 'RAG', 'RAG', 'RAG', 'Embeddings']",0.45590466260910034,0.02723333239555359
+200,20,MiniLM,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'RAG', 'HyDE']",0.4650958776473999,0.026685208082199097
+200,20,MiniLM,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.5463129878044128,0.07972961664199829
+200,20,MiniLM,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.6010657548904419,0.09936785697937012
+200,20,MiniLM,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.4611964225769043,0.040753304958343506
+200,20,MiniLM,Is generating a fake answer before search the same as fine-tuning?,HyDE,0.0,1.0,1.0,0.5,"['Evaluation', 'HyDE', 'RAG', 'RAG', 'Evaluation']",0.37144795060157776,0.033846497535705566
+200,20,MiniLM,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,0.0,1.0,0.25,"['RAG', 'Evaluation', 'Evaluation', 'HyDE', 'RAG']",0.38450223207473755,0.16821837425231934
+200,20,MiniLM,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'HyDE', 'RAG', 'RAG']",0.6426851153373718,0.048309385776519775
+200,20,MiniLM,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,0.0,1.0,1.0,0.3333333333333333,"['Chunking', 'RAG', 'Embeddings', 'HyDE', 'Chunking']",0.3412259817123413,0.031033873558044434
+200,20,MiniLM,Can inner product and cosine similarity give different ranking results?,Embeddings,0.0,1.0,1.0,0.5,"['VectorDB', 'Embeddings', 'VectorDB', 'Embeddings', 'VectorDB']",0.37547576427459717,0.0128898024559021
+200,20,MPNet,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'HyDE', 'Evaluation']",0.6249933838844299,0.0664064884185791
+200,20,MPNet,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'RAG', 'RAG']",0.5728269815444946,0.345453679561615
+200,20,MPNet,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'RAG', 'Evaluation']",0.8157325983047485,0.3529619574546814
+200,20,MPNet,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.6596480011940002,0.01230853796005249
+200,20,MPNet,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.6834737062454224,0.08344459533691406
+200,20,MPNet,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.8415653109550476,0.29805904626846313
+200,20,MPNet,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Embeddings', 'Chunking', 'Embeddings', 'VectorDB']",0.5611940026283264,0.03814589977264404
+200,20,MPNet,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Embeddings', 'Embeddings', 'Embeddings', 'RAG']",0.5732327103614807,0.007053494453430176
+200,20,MPNet,What is FAISS and how does it work?,VectorDB,0.0,1.0,1.0,0.5,"['RAG', 'VectorDB', 'RAG', 'RAG', 'Evaluation']",0.3244253396987915,0.01712319254875183
+200,20,MPNet,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Evaluation', 'Evaluation', 'VectorDB', 'Chunking']",0.3454911708831787,0.021405696868896484
+200,20,MPNet,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'HyDE', 'HyDE', 'RAG']",0.6144624352455139,0.08641844987869263
+200,20,MPNet,How does hypothetical document embedding improve search?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'Embeddings', 'Embeddings', 'HyDE', 'Embeddings']",0.6612601280212402,0.08566820621490479
+200,20,MPNet,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'Evaluation', 'RAG', 'RAG']",0.6353874802589417,0.04709810018539429
+200,20,MPNet,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'HyDE', 'VectorDB', 'RAG']",0.3736664652824402,0.06787979602813721
+200,20,MPNet,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'HyDE', 'HyDE']",0.4427986741065979,0.013609856367111206
+200,20,MPNet,Does overlap always improve retrieval precision?,Chunking,0.0,1.0,1.0,0.3333333333333333,"['HyDE', 'RAG', 'Chunking', 'Evaluation', 'Chunking']",0.4355282187461853,0.0054056644439697266
+200,20,MPNet,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Embeddings', 'Chunking', 'RAG', 'RAG']",0.3242405652999878,0.0432162880897522
+200,20,MPNet,When is updating model weights better than external retrieval?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Embeddings', 'RAG', 'RAG', 'HyDE']",0.4176751971244812,0.03891056776046753
+200,20,MPNet,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'HyDE', 'RAG']",0.48080313205718994,0.043550312519073486
+200,20,MPNet,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.41576144099235535,0.03591737151145935
+200,20,MPNet,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'HyDE', 'Chunking']",0.5884323716163635,0.0703551173210144
+200,20,MPNet,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Chunking']",0.5766381025314331,0.08491677045822144
+200,20,MPNet,Is generating a fake answer before search the same as fine-tuning?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'RAG', 'Evaluation', 'HyDE', 'HyDE']",0.3866581320762634,0.05438929796218872
+200,20,MPNet,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['RAG', 'Evaluation', 'HyDE', 'HyDE', 'RAG']",0.4596015512943268,0.2164655327796936
+200,20,MPNet,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'HyDE', 'RAG', 'RAG']",0.6733217239379883,0.016418397426605225
+200,20,MPNet,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,0.0,0.0,1.0,0.25,"['RAG', 'Evaluation', 'Chunking', 'Embeddings', 'VectorDB']",0.3029744625091553,0.01971536874771118
+200,20,MPNet,Can inner product and cosine similarity give different ranking results?,Embeddings,0.0,1.0,1.0,0.5,"['VectorDB', 'Embeddings', 'VectorDB', 'Embeddings', 'VectorDB']",0.3732629120349884,0.010750383138656616
+500,50,MiniLM,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'HyDE', 'Evaluation']",0.7066153287887573,0.21872186660766602
+500,50,MiniLM,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'Evaluation', 'Chunking']",0.3593703508377075,0.14383363723754883
+500,50,MiniLM,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'RAG', 'RAG']",0.5888254642486572,0.06862390041351318
+500,50,MiniLM,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'RAG']",0.6851403713226318,0.06519007682800293
+500,50,MiniLM,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'Evaluation']",0.7119191288948059,0.2123531699180603
+500,50,MiniLM,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'HyDE']",0.8179610371589661,0.35328081250190735
+500,50,MiniLM,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Embeddings', 'HyDE', 'Chunking', 'Chunking']",0.5888437032699585,0.10235404968261719
+500,50,MiniLM,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'RAG', 'RAG', 'RAG', 'Evaluation']",0.5581165552139282,0.0198480486869812
+500,50,MiniLM,What is FAISS and how does it work?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'RAG', 'Chunking', 'Chunking', 'HyDE']",0.2543308138847351,0.09094592928886414
+500,50,MiniLM,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'HyDE', 'VectorDB', 'RAG', 'RAG']",0.3831672668457031,0.08359509706497192
+500,50,MiniLM,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'RAG', 'RAG', 'Evaluation']",0.6214565634727478,0.12197330594062805
+500,50,MiniLM,How does hypothetical document embedding improve search?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['Embeddings', 'Embeddings', 'HyDE', 'HyDE', 'Chunking']",0.6379768252372742,0.0480613112449646
+500,50,MiniLM,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'HyDE', 'RAG', 'RAG']",0.6580579280853271,0.07169389724731445
+500,50,MiniLM,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'HyDE', 'VectorDB', 'Evaluation', 'Embeddings']",0.35605156421661377,0.1210731565952301
+500,50,MiniLM,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'HyDE', 'Evaluation']",0.403576135635376,0.0055082738399505615
+500,50,MiniLM,Does overlap always improve retrieval precision?,Chunking,0.0,1.0,1.0,0.5,"['HyDE', 'Chunking', 'RAG', 'Evaluation', 'RAG']",0.4285014867782593,0.048011064529418945
+500,50,MiniLM,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'HyDE', 'RAG', 'RAG']",0.30377882719039917,0.04767662286758423
+500,50,MiniLM,When is updating model weights better than external retrieval?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'Embeddings', 'Evaluation', 'HyDE']",0.4002012014389038,0.015108644962310791
+500,50,MiniLM,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'HyDE', 'Evaluation', 'RAG']",0.42459988594055176,0.001922309398651123
+500,50,MiniLM,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'HyDE']",0.5501379370689392,0.11160537600517273
+500,50,MiniLM,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'HyDE']",0.5615909695625305,0.056885480880737305
+500,50,MiniLM,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'RAG']",0.3935978412628174,2.467632293701172e-05
+500,50,MiniLM,Is generating a fake answer before search the same as fine-tuning?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['Evaluation', 'Evaluation', 'HyDE', 'RAG', 'RAG']",0.351459264755249,0.004493743181228638
+500,50,MiniLM,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['RAG', 'Evaluation', 'HyDE', 'RAG', 'RAG']",0.26270240545272827,0.012438774108886719
+500,50,MiniLM,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'RAG', 'Embeddings', 'RAG']",0.65097975730896,0.051198601722717285
+500,50,MiniLM,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,0.0,1.0,1.0,0.5,"['Chunking', 'Embeddings', 'Chunking', 'Chunking', 'RAG']",0.3142207860946655,0.03707316517829895
+500,50,MiniLM,Can inner product and cosine similarity give different ranking results?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'VectorDB', 'VectorDB', 'Embeddings', 'Evaluation']",0.4653714895248413,0.08909469842910767
+500,50,MPNet,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'Evaluation', 'RAG']",0.668979823589325,0.17487934231758118
+500,50,MPNet,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'RAG', 'RAG']",0.24066752195358276,0.055645301938056946
+500,50,MPNet,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'Evaluation', 'RAG', 'VectorDB']",0.4614372253417969,0.13366717100143433
+500,50,MPNet,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'RAG']",0.6567494869232178,0.099587082862854
+500,50,MPNet,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'HyDE', 'Evaluation']",0.6373969316482544,0.12521904706954956
+500,50,MPNet,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'HyDE']",0.8429660797119141,0.39678260684013367
+500,50,MPNet,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Chunking', 'Chunking', 'Embeddings', 'VectorDB']",0.5271748304367065,0.060725510120391846
+500,50,MPNet,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Evaluation', 'RAG', 'RAG', 'RAG']",0.588266134262085,0.12600922584533691
+500,50,MPNet,What is FAISS and how does it work?,VectorDB,0.0,0.0,1.0,0.25,"['RAG', 'Evaluation', 'HyDE', 'VectorDB', 'RAG']",0.23134729266166687,0.0028361976146698
+500,50,MPNet,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Evaluation', 'HyDE', 'VectorDB', 'RAG']",0.3599451780319214,0.04388967156410217
+500,50,MPNet,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'RAG', 'RAG', 'Evaluation']",0.6662552356719971,0.29943883419036865
+500,50,MPNet,How does hypothetical document embedding improve search?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'Embeddings', 'Embeddings', 'Chunking', 'HyDE']",0.6579190492630005,0.06785309314727783
+500,50,MPNet,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'HyDE', 'RAG', 'RAG']",0.6240861415863037,0.03149867057800293
+500,50,MPNet,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'Evaluation', 'VectorDB', 'RAG', 'HyDE']",0.3444153070449829,0.06092250347137451
+500,50,MPNet,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'RAG', 'RAG', 'RAG']",0.3761069178581238,0.021136045455932617
+500,50,MPNet,Does overlap always improve retrieval precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'HyDE', 'RAG', 'RAG', 'Evaluation']",0.43561795353889465,0.039838820695877075
+500,50,MPNet,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'VectorDB', 'RAG', 'Embeddings']",0.25480520725250244,0.006004303693771362
+500,50,MPNet,When is updating model weights better than external retrieval?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'HyDE', 'Embeddings']",0.3885955810546875,0.04914063215255737
+500,50,MPNet,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'RAG', 'Chunking']",0.46535494923591614,0.04494541883468628
+500,50,MPNet,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'RAG', 'HyDE']",0.36572349071502686,0.056169331073760986
+500,50,MPNet,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'HyDE', 'Chunking', 'Chunking']",0.5635780692100525,0.024708449840545654
+500,50,MPNet,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Chunking', 'Chunking', 'RAG']",0.5138405561447144,0.020276039838790894
+500,50,MPNet,Is generating a fake answer before search the same as fine-tuning?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'RAG', 'Evaluation', 'RAG']",0.36107149720191956,0.04280465841293335
+500,50,MPNet,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,1.0,1.0,0.5,"['RAG', 'HyDE', 'RAG', 'HyDE', 'Evaluation']",0.19662047922611237,0.05104726552963257
+500,50,MPNet,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'HyDE', 'Evaluation', 'RAG', 'Chunking']",0.653192400932312,0.16888660192489624
+500,50,MPNet,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,0.0,1.0,1.0,0.5,"['Chunking', 'Embeddings', 'Embeddings', 'Evaluation', 'VectorDB']",0.30277523398399353,0.04656684398651123
+500,50,MPNet,Can inner product and cosine similarity give different ranking results?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'VectorDB', 'VectorDB', 'Evaluation', 'HyDE']",0.4525066614151001,0.08128169178962708
+800,80,MiniLM,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'Evaluation', 'RAG', 'Embeddings']",0.724215030670166,0.18433117866516113
+800,80,MiniLM,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Chunking', 'Evaluation', 'HyDE', 'RAG']",0.3257463574409485,0.14165568351745605
+800,80,MiniLM,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'Embeddings', 'HyDE']",0.5459879636764526,0.06947541236877441
+800,80,MiniLM,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'HyDE', 'RAG', 'RAG']",0.6274346709251404,0.008552253246307373
+800,80,MiniLM,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Evaluation', 'RAG', 'RAG']",0.6683230996131897,0.19339993596076965
+800,80,MiniLM,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'HyDE', 'Embeddings', 'RAG']",0.7851308584213257,0.39160430431365967
+800,80,MiniLM,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'HyDE', 'Chunking', 'Chunking', 'RAG']",0.6119892597198486,0.18700584769248962
+800,80,MiniLM,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'RAG', 'RAG', 'Evaluation', 'HyDE']",0.5699025988578796,0.11060738563537598
+800,80,MiniLM,What is FAISS and how does it work?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Chunking', 'RAG', 'HyDE', 'Chunking']",0.2449982464313507,0.10075414180755615
+800,80,MiniLM,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Evaluation', 'HyDE', 'Chunking', 'RAG']",0.36704325675964355,0.16895171999931335
+800,80,MiniLM,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'RAG', 'RAG', 'Evaluation', 'RAG']",0.5800195932388306,0.29981470108032227
+800,80,MiniLM,How does hypothetical document embedding improve search?,HyDE,0.0,1.0,1.0,0.5,"['Embeddings', 'HyDE', 'Chunking', 'RAG', 'VectorDB']",0.6403634548187256,0.028760254383087158
+800,80,MiniLM,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'RAG', 'RAG', 'HyDE', 'Embeddings']",0.6729621291160583,0.20607590675354004
+800,80,MiniLM,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'HyDE', 'Embeddings', 'VectorDB', 'RAG']",0.34895676374435425,0.11916022002696991
+800,80,MiniLM,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'HyDE', 'Evaluation', 'Chunking']",0.45758378505706787,0.02162325382232666
+800,80,MiniLM,Does overlap always improve retrieval precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'RAG', 'RAG', 'Evaluation', 'HyDE']",0.4060494005680084,0.019110411405563354
+800,80,MiniLM,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Embeddings', 'HyDE']",0.33977729082107544,0.01009279489517212
+800,80,MiniLM,When is updating model weights better than external retrieval?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Evaluation', 'Embeddings']",0.43275612592697144,0.04634964466094971
+800,80,MiniLM,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Evaluation', 'HyDE']",0.47400233149528503,0.03267219662666321
+800,80,MiniLM,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'RAG', 'HyDE', 'RAG']",0.5109556913375854,0.10146084427833557
+800,80,MiniLM,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'RAG', 'Embeddings', 'HyDE']",0.583583414554596,0.07684099674224854
+800,80,MiniLM,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'RAG', 'HyDE', 'RAG']",0.38268226385116577,0.00025340914726257324
+800,80,MiniLM,Is generating a fake answer before search the same as fine-tuning?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['Evaluation', 'RAG', 'HyDE', 'RAG', 'VectorDB']",0.3971341550350189,0.06641176342964172
+800,80,MiniLM,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['RAG', 'Evaluation', 'HyDE', 'RAG', 'RAG']",0.24916236102581024,0.01685279607772827
+800,80,MiniLM,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'RAG', 'RAG', 'Evaluation', 'Embeddings']",0.6352283358573914,0.3111307621002197
+800,80,MiniLM,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Chunking', 'Chunking', 'Evaluation', 'RAG']",0.30699604749679565,0.035454630851745605
+800,80,MiniLM,Can inner product and cosine similarity give different ranking results?,Embeddings,0.0,1.0,1.0,0.5,"['VectorDB', 'Embeddings', 'Evaluation', 'RAG', 'Chunking']",0.38246941566467285,0.05367937684059143
+800,80,MPNet,Explain retrieval augmented generation in simple terms,RAG,1.0,1.0,1.0,1.0,"['RAG', 'HyDE', 'Evaluation', 'RAG', 'RAG']",0.6321811079978943,0.15980267524719238
+800,80,MPNet,How does retrieval reduce hallucinations?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Evaluation', 'Chunking']",0.1787140667438507,0.030354201793670654
+800,80,MPNet,What is the advantage of RAG over fine-tuning?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'Evaluation', 'RAG', 'Chunking', 'Embeddings']",0.39482539892196655,0.10429871082305908
+800,80,MPNet,What is chunking and why do we use overlap?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'RAG', 'HyDE', 'Evaluation']",0.5491010546684265,0.014178216457366943
+800,80,MPNet,How does chunk size affect retrieval quality?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Evaluation', 'Embeddings', 'RAG']",0.5591299533843994,0.17849838733673096
+800,80,MPNet,What is recursive character text splitting?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Embeddings', 'HyDE', 'RAG']",0.7990330457687378,0.3937048017978668
+800,80,MPNet,What are text embeddings and how do they work?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Chunking', 'Chunking', 'HyDE', 'VectorDB']",0.5781331062316895,0.10551124811172485
+800,80,MPNet,Which embedding models are popular for RAG?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'RAG', 'Evaluation', 'VectorDB', 'Chunking']",0.6085334420204163,0.18143293261528015
+800,80,MPNet,What is FAISS and how does it work?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Evaluation', 'RAG', 'RAG', 'RAG']",0.2173236608505249,0.008296430110931396
+800,80,MPNet,What are the different FAISS index types?,VectorDB,1.0,1.0,1.0,1.0,"['VectorDB', 'Evaluation', 'Embeddings', 'RAG', 'Chunking']",0.2601870894432068,0.03343813121318817
+800,80,MPNet,What is HyDE in retrieval?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'Evaluation', 'RAG', 'RAG', 'Chunking']",0.4175461530685425,0.14521044492721558
+800,80,MPNet,How does hypothetical document embedding improve search?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'Embeddings', 'Chunking', 'VectorDB', 'RAG']",0.6620439887046814,0.03946024179458618
+800,80,MPNet,How do we evaluate retrieval quality?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'RAG', 'Embeddings', 'HyDE', 'Chunking']",0.6595370173454285,0.313528835773468
+800,80,MPNet,What is Mean Reciprocal Rank (MRR)?,Evaluation,1.0,1.0,1.0,1.0,"['Evaluation', 'RAG', 'Embeddings', 'Chunking', 'RAG']",0.3417859971523285,0.16675418615341187
+800,80,MPNet,Why does adding retrieved context help LLM answers stay accurate?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'HyDE', 'RAG', 'Evaluation']",0.4275661110877991,0.07189539074897766
+800,80,MPNet,Does overlap always improve retrieval precision?,Chunking,0.0,1.0,1.0,0.3333333333333333,"['Evaluation', 'RAG', 'Chunking', 'VectorDB', 'HyDE']",0.3194406032562256,0.002881348133087158
+800,80,MPNet,Should I retrain my model or just add a search layer?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'VectorDB', 'RAG', 'Embeddings']",0.3242405652999878,0.0436343252658844
+800,80,MPNet,When is updating model weights better than external retrieval?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'Evaluation', 'RAG', 'Embeddings']",0.3716016709804535,0.00017198920249938965
+800,80,MPNet,Can retrieval completely replace parameter updates for domain adaptation?,RAG,1.0,1.0,1.0,1.0,"['RAG', 'RAG', 'RAG', 'Evaluation', 'Chunking']",0.45537182688713074,0.04405871033668518
+800,80,MPNet,What happens if my chunks are too small to contain a complete answer?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'HyDE', 'RAG', 'RAG']",0.3276626467704773,0.03600090742111206
+800,80,MPNet,Does splitting documents always improve search precision?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'HyDE', 'Embeddings', 'Evaluation']",0.567649245262146,0.11599481105804443
+800,80,MPNet,How do I handle tables and code blocks when segmenting documents?,Chunking,1.0,1.0,1.0,1.0,"['Chunking', 'Chunking', 'Embeddings', 'HyDE', 'RAG']",0.4852294921875,0.003956317901611328
+800,80,MPNet,Is generating a fake answer before search the same as fine-tuning?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'RAG', 'RAG', 'Evaluation', 'RAG']",0.3447498083114624,0.03768572211265564
+800,80,MPNet,Why would I want the LLM to hallucinate before retrieval?,HyDE,0.0,1.0,1.0,0.3333333333333333,"['RAG', 'RAG', 'HyDE', 'Evaluation', 'RAG']",0.16076676547527313,0.0075253695249557495
+800,80,MPNet,Does HyDE work when the query uses jargon the LLM doesn't know?,HyDE,1.0,1.0,1.0,1.0,"['HyDE', 'RAG', 'Evaluation', 'RAG', 'Chunking']",0.5220791101455688,0.23934003710746765
+800,80,MPNet,Why do two semantically similar sentences sometimes have low cosine scores?,Embeddings,1.0,1.0,1.0,1.0,"['Embeddings', 'Evaluation', 'HyDE', 'VectorDB', 'Chunking']",0.2735658884048462,0.0483294278383255
+800,80,MPNet,Can inner product and cosine similarity give different ranking results?,Embeddings,0.0,1.0,1.0,0.5,"['VectorDB', 'Embeddings', 'Evaluation', 'HyDE', 'Chunking']",0.3807494342327118,0.10155466198921204
