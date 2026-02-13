@@ -1,0 +1,3 @@
+strategy,top1_accuracy,top3_hit_rate,avg_top1_score
+A_small_300_50,1.0,1.0,0.6802
+B_large_800_100,1.0,1.0,0.6078
