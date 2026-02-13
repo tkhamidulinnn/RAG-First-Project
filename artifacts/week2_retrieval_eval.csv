@@ -1,0 +1,6 @@
+query,expected_topic,top1_topic,top1_score,top3_hit
+How to create a git branch?,GIT,GIT,0.623,True
+What is GCP?,GCP,RAG,0.3727,False
+What is GIT?,GIT,GIT,0.5477,True
+What is HyDE in RAG?,RAG,RAG,0.4092,True
+What is RAG?,RAG,RAG,0.4629,True

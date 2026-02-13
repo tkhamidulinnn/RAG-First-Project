@@ -1,143 +1,340 @@
 run_id,question,template,model,temperature,latency_s,prompt_chars,context_chars,n_chunks,retrieval_query_used,answer,idk_flag,has_citation_flag
-773148cfcd0d205f,What is Retrieval-Augmented Generation (RAG)?,qa_strict,gemma3:4b,0.0,0.62,325,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-ed2bea5911a9d13d,What is Retrieval-Augmented Generation (RAG)?,qa_strict,gemma3:4b,0.2,0.449,325,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-223dbe53cb99f7e7,What is Retrieval-Augmented Generation (RAG)?,summary,gemma3:4b,0.0,1.507,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-ec596e6f77b05533,What is Retrieval-Augmented Generation (RAG)?,summary,gemma3:4b,0.2,1.392,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-83b5662850e2bfeb,What is Retrieval-Augmented Generation (RAG)?,reasoning,gemma3:4b,0.0,6.652,296,0,0,Explain retrieval augmented generation in simple terms,"1) Retrieval-Augmented Generation (RAG) is a technique that combines the strengths of both retrieval-based and generative AI models. It first retrieves relevant information from an external knowledge source, and then uses this retrieved information to augment the input to a generative model, resulting in more accurate and contextually relevant outputs. Essentially, it allows the generative model to access and utilize a broader range of information than it could on its own.
+773148cfcd0d205f,What is Retrieval-Augmented Generation (RAG)?,qa_strict,gemma3:4b,0.0,1.931,1160,835,3,What is Retrieval-Augmented Generation (RAG)?,"Retrieval-augmented generation, or RAG, is a technique that uses authoritative, external data to improve grounded, context-aware answers. [Chunk 2] The retrieval pipeline becomes a foundation for a broader system that combines search with generation.",False,True
+ed2bea5911a9d13d,What is Retrieval-Augmented Generation (RAG)?,qa_strict,gemma3:4b,0.2,1.386,1160,835,3,What is Retrieval-Augmented Generation (RAG)?,"Retrieval-augmented generation, or RAG, is a technique that uses authoritative, external data to improve grounded, context-aware answers. [Chunk 2] The retrieval pipeline becomes a foundation for a broader system that combines search with generation.",False,True
+223dbe53cb99f7e7,What is Retrieval-Augmented Generation (RAG)?,summary,gemma3:4b,0.0,8.65,1064,835,3,What is Retrieval-Augmented Generation (RAG)?,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG), broken down into the requested sections:
 
-2) Evidence:
-   [Chunk 1: ""Retrieval-Augmented Generation (RAG) is a technique that combines the strengths of both retrieval-based and generative AI models.""]
-   [Chunk 2: ""It first retrieves relevant information from an external knowledge source, and then uses this retrieved information to augment the input to a generative model, resulting in more accurate and contextually relevant outputs.""]
+**Key Points:**
 
-3) Reasoning:
-    *   RAG utilizes two distinct AI components: retrieval and generation.
-    *   The retrieval component identifies pertinent information from an external source.
-    *   This retrieved information is then fed into the generative model.
-    *   The generative model leverages this retrieved context to produce its response.
-    *   This process enhances the accuracy and relevance of the generated output.
-    *   Ultimately, RAG bridges the gap between the knowledge within a generative model and external, up-to-date information.",False,True
-0b6132fa69ec3924,What is Retrieval-Augmented Generation (RAG)?,reasoning,gemma3:4b,0.2,6.372,296,0,0,Explain retrieval augmented generation in simple terms,"1) Retrieval-Augmented Generation (RAG) is a technique that combines the strengths of both retrieval-based and generative AI models. It retrieves relevant information from an external knowledge source and then uses that information to augment the generation process, resulting in more accurate and contextually rich responses. Essentially, it allows the model to access and utilize a broader range of information than it could on its own.
+*   **What is RAG?** Retrieval-Augmented Generation (RAG) is a technique that enhances generative models by incorporating authoritative, external data. It’s designed to overcome limitations of traditional generative models.
+*   **Simple Architecture:** The RAG architecture is relatively simple and predictable, making it well-suited for applications where relevant document retrieval is a key requirement.
+*   **Agentic RAG:**  A more advanced approach, Agentic RAG, combines retrieval with generation to produce grounded, context-aware answers.
+*   **Retrieval Pipeline:** The core of RAG is a retrieval pipeline – a process that searches for relevant documents based on a user query.
 
-2) Evidence:
-   [Chunk 1: ""RAG systems typically involve a retrieval component that searches a knowledge base for relevant documents or passages.""]
-   [Chunk 2: “The retrieved information is then fed into a generative model, such as a large language model (LLM), which uses it to generate a response.”]
-   [Chunk 3: “This process allows the LLM to ground its responses in factual information from the external knowledge source.”]
+**Definitions:**
 
-3) Reasoning:
-    *   The system first identifies a user query.
-    *   It then uses a retrieval component to search a knowledge base.
-    *   The retrieval component identifies relevant documents or passages.
-    *   These retrieved passages are provided as context to the generative model.
-    *   The generative model then uses this context to formulate a response.
-    *   This process ensures the response is based on factual information from the external knowledge source.",False,True
-337a8edb7ca68e39,Why do we use chunk overlap in retrieval systems?,qa_strict,gemma3:4b,0.0,0.604,329,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-f6328cd3451d8190,Why do we use chunk overlap in retrieval systems?,qa_strict,gemma3:4b,0.2,0.449,329,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-7f0c3705107362ba,Why do we use chunk overlap in retrieval systems?,summary,gemma3:4b,0.0,1.57,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-858b1adc6e67ac00,Why do we use chunk overlap in retrieval systems?,summary,gemma3:4b,0.2,1.405,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-9d10558102eb42ed,Why do we use chunk overlap in retrieval systems?,reasoning,gemma3:4b,0.0,5.212,300,0,0,Explain retrieval augmented generation in simple terms,"1) We use chunk overlap in retrieval systems to improve recall by ensuring that relevant information, even if it spans multiple chunks, is still retrieved. Overlapping chunks allow the system to identify connections between pieces of information that might otherwise be missed if chunks were entirely disjointed. This ultimately leads to a more complete and accurate retrieval of the desired information.
+*   **Retrieval-Augmented Generation (RAG):** A technique that combines retrieval of relevant external data with generative models to produce more informed and accurate outputs.
 
-2) Evidence: “The system utilizes chunk overlap to enhance recall.” [Chunk 1]
 
-3) Reasoning:
-    *   Chunking divides content into smaller, manageable units.
-    *   Overlap creates redundancy – a piece of information can appear in multiple chunks.
-    *   This redundancy increases the probability of a relevant chunk being retrieved.
-    *   If a query relates to a concept present in both Chunk 1 and Chunk 2 (due to overlap), it’s more likely to be found.
-    *   Without overlap, information in Chunk 2 might be missed if the query doesn’t explicitly mention it.
-    *   Therefore, overlap maximizes the chances of a complete retrieval.",False,True
-87a2b93af4e9a74b,Why do we use chunk overlap in retrieval systems?,reasoning,gemma3:4b,0.2,4.745,300,0,0,Explain retrieval augmented generation in simple terms,"1) We use chunk overlap in retrieval systems to improve recall by ensuring that relevant information, even if it spans multiple chunks, is still retrieved. Overlapping chunks allow the system to identify connections between pieces of information that might otherwise be missed if chunks were entirely disjointed. This ultimately leads to a more complete and accurate retrieval of the desired information.
+**Practical Notes:**
 
-2) Evidence: “The system utilizes overlapping chunks to enhance recall.” [Chunk 1]
+*   The retrieval pipeline is central to RAG’s functionality, acting as the foundation for a broader system.
+*   RAG leverages search capabilities to build a system that combines search with generation.
 
-3) Reasoning:
-    *   Chunking divides content into smaller, manageable units.
-    *   Overlapping chunks create redundancy.
-    *   Redundancy increases the likelihood of a relevant chunk being identified.
-    *   If a query relates to a concept partially covered in one chunk, the overlap allows the system to find the related information in the adjacent chunk.
-    *   This mitigates the risk of missing relevant information due to strict chunk boundaries.
-    *   Ultimately, overlap boosts the chances of a complete match.",False,True
-7ec56dafa934d2b9,Explain cosine similarity vs dot product similarity for embeddings.,qa_strict,gemma3:4b,0.0,0.616,347,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-6c023e8fc15159a7,Explain cosine similarity vs dot product similarity for embeddings.,qa_strict,gemma3:4b,0.2,0.434,347,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-1a957e1cea2c36d5,Explain cosine similarity vs dot product similarity for embeddings.,summary,gemma3:4b,0.0,1.601,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-e78092d6ef05cd71,Explain cosine similarity vs dot product similarity for embeddings.,summary,gemma3:4b,0.2,1.46,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-7d2b1ca53a006f17,Explain cosine similarity vs dot product similarity for embeddings.,reasoning,gemma3:4b,0.0,6.959,318,0,0,Explain retrieval augmented generation in simple terms,"1) Cosine similarity and dot product similarity are both measures of similarity between embeddings, but they differ in how they account for magnitude. Cosine similarity focuses solely on the angle between the vectors, disregarding their lengths, while dot product similarity considers both the angle and the magnitudes of the vectors. This means dot product similarity is more sensitive to the overall strength of the relationship, whereas cosine similarity prioritizes the direction.
+**Missing Information / Open Questions:**
 
-2) Evidence:
-*   “[Cosine similarity] measures the cosine of the angle between two vectors.” [https://en.wikipedia.org/wiki/Cosine_similarity]
-*   “[Dot product similarity] is calculated as the dot product of two vectors divided by the product of their magnitudes.” [https://towardsdatascience.com/similarity-metrics-for-embeddings-a-comprehensive-guide-999999]
+*   The context doesn't delve into *how* the retrieval pipeline is implemented (e.g., specific search algorithms, indexing methods).
+*   It doesn’t detail the types of data sources typically used in a RAG system.
+*   It doesn’t explain the specific process of how the retrieved information is then used by the generative model.",False,False
+ec596e6f77b05533,What is Retrieval-Augmented Generation (RAG)?,summary,gemma3:4b,0.2,9.511,1064,835,3,What is Retrieval-Augmented Generation (RAG)?,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG), broken down into the requested sections:
+
+**Key Points:**
+
+*   **What is RAG?** Retrieval-Augmented Generation (RAG) is a technique that enhances generative AI models by incorporating authoritative, external data. It’s designed to overcome limitations of traditional generative models.
+*   **Simple Architecture:** The RAG architecture is relatively simple and predictable, making it well-suited for applications where relevant document retrieval is a key requirement.
+*   **Agentic RAG:**  A more advanced approach, Agentic RAG, combines retrieval with generation to produce grounded, context-aware answers.
+*   **Retrieval Pipeline:** The core of RAG is a retrieval pipeline – a process that involves searching for relevant documents based on a user query.
+
+**Definitions:**
+
+*   **Retrieval-Augmented Generation (RAG):** A technique that uses external data to improve generative AI output.
+*   **Retrieval Pipeline:** The workflow involved in searching for and retrieving relevant documents based on a user's query.
+
+
+**Practical Notes:**
+
+*   RAG’s success relies on a robust retrieval pipeline – the quality of the retrieved documents directly impacts the quality of the generated response.
+*   The architecture is designed for situations where document retrieval is a clear and necessary step in the process.
+
+**Missing Information / Open Questions:**
+
+*   The context doesn’t delve into the specifics of *how* the retrieval pipeline works (e.g., the types of search algorithms used, indexing methods, or how the retrieved information is formatted for the generative model).
+*   It doesn’t discuss the challenges of RAG, such as handling ambiguous queries or ensuring the retrieved documents are truly relevant.
+*   The context doesn’t elaborate on the different types of RAG systems (e.g., those using vector databases vs. traditional keyword search).",False,False
+83b5662850e2bfeb,What is Retrieval-Augmented Generation (RAG)?,reasoning,gemma3:4b,0.0,5.752,1131,835,3,What is Retrieval-Augmented Generation (RAG)?,"1) Answer: Retrieval-augmented generation (RAG) is a technique that utilizes authoritative, external data to enhance the generation of responses. Its architecture is designed for predictable applications where relevant document retrieval is key. Agentic RAG combines retrieval with generation to produce grounded, context-aware answers.
+
+2) Evidence: [Chunk 1] “users. Retrieval-augmented generation can address these limitations. What is Retrieval-augmented generation? Retrieval-augmented generation, or RAG, is a technique that uses authoritative, external data to improve” and [Chunk 3] “This is the core idea behind Retrieval-Augmented Generation (RAG). The retrieval pipeline becomes a foundation for a broader system that combines search with generation.”
 
 3) Reasoning:
-*   Cosine similarity is based on the cosine of the angle, implying it only cares about the direction of the vectors.
-*   Dot product similarity uses the dot product, which is influenced by both the direction and the magnitude of the vectors.
-*   Therefore, a larger dot product indicates a stronger similarity, regardless of the vector's length.
-*   Cosine similarity normalizes the vectors to unit length before calculating the cosine, effectively removing the magnitude component.
-*   This difference in calculation leads to distinct behaviors when comparing embeddings of varying magnitudes.",False,False
-f52257b946c92e47,Explain cosine similarity vs dot product similarity for embeddings.,reasoning,gemma3:4b,0.2,6.699,318,0,0,Explain retrieval augmented generation in simple terms,"1) Cosine similarity and dot product similarity are both measures of similarity between embeddings, but they differ in how they account for magnitude. Cosine similarity focuses solely on the angle between the vectors, disregarding their lengths, while dot product similarity considers both the angle and the magnitudes of the vectors. This means dot product similarity is more sensitive to the overall strength of the relationship, whereas cosine similarity emphasizes the direction.
+    *   RAG’s core function is to improve generation by using external data.
+    *   The retrieval pipeline is the foundational element of RAG.
+    *   RAG combines this retrieval with a generation process.
+    *   Agentic RAG builds upon this by integrating search and generation for context-aware answers.",False,True
+0b6132fa69ec3924,What is Retrieval-Augmented Generation (RAG)?,reasoning,gemma3:4b,0.2,5.129,1131,835,3,What is Retrieval-Augmented Generation (RAG)?,"1) Answer: Retrieval-augmented generation (RAG) is a technique that utilizes authoritative, external data to enhance the generation of responses. Its architecture is designed for predictable applications where relevant document retrieval is key. Agentic RAG combines retrieval with generation to produce grounded, context-aware answers.
 
-2) Evidence:
-*   “[Cosine similarity] measures the cosine of the angle between two vectors.” [https://en.wikipedia.org/wiki/Cosine_similarity]
-*   “[Dot product similarity] is calculated as the dot product of two vectors divided by the product of their magnitudes.” [https://towardsdatascience.com/similarity-metrics-for-embeddings-a-comprehensive-guide-99991a98496]
+2) Evidence: [Chunk 1] “users. Retrieval-augmented generation can address these limitations. What is Retrieval-augmented generation? Retrieval-augmented generation, or RAG, is a technique that uses authoritative, external data to improve” and [Chunk 3] “This is the core idea behind Retrieval-Augmented Generation (RAG). The retrieval pipeline becomes a foundation for a broader system that combines search with generation.”
 
 3) Reasoning:
-*   Cosine similarity’s core function is to compare angles, implying that vectors pointing in the same direction are considered similar regardless of their size.
-*   The dot product, conversely, relies on the product of magnitudes, suggesting that larger magnitudes contribute more to similarity.
-*   Therefore, a dot product of 1 indicates perfect similarity in both angle and magnitude, while cosine similarity of 1 only indicates perfect similarity in direction.
-*   This difference in calculation leads to varying sensitivities to the strength of the relationship represented by the embeddings.",False,False
-9947d6374ac96428,What is the role of FAISS in a RAG pipeline?,qa_strict,gemma3:4b,0.0,0.605,324,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-9569a98e2563ddc2,What is the role of FAISS in a RAG pipeline?,qa_strict,gemma3:4b,0.2,0.442,324,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-08ab43c3a40204fa,What is the role of FAISS in a RAG pipeline?,summary,gemma3:4b,0.0,1.503,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-cb934c05b5985bb7,What is the role of FAISS in a RAG pipeline?,summary,gemma3:4b,0.2,1.374,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-9d4cfa1f0a9435c2,What is the role of FAISS in a RAG pipeline?,reasoning,gemma3:4b,0.0,6.197,295,0,0,Explain retrieval augmented generation in simple terms,"1) Answer: FAISS (Facebook AI Similarity Search) plays a crucial role in a Retrieval-Augmented Generation (RAG) pipeline by efficiently indexing and searching a large collection of text chunks for semantic similarity. It allows the RAG system to quickly identify the most relevant chunks from the knowledge base based on the user’s query, rather than relying on keyword matching. This significantly improves the accuracy and relevance of the generated responses.
+    *   RAG’s core function is to improve generation by using external data.
+    *   The retrieval pipeline is the foundational element of RAG.
+    *   RAG combines this retrieval with a generation process.
+    *   Agentic RAG builds upon this by integrating search and generation into a broader system.",False,True
+337a8edb7ca68e39,Why do we use chunk overlap in retrieval systems?,qa_strict,gemma3:4b,0.0,0.975,1014,685,3,Why do we use chunk overlap in retrieval systems?,I don't know based on the provided context.,True,False
+f6328cd3451d8190,Why do we use chunk overlap in retrieval systems?,qa_strict,gemma3:4b,0.2,0.444,1014,685,3,Why do we use chunk overlap in retrieval systems?,I don't know based on the provided context.,True,False
+7f0c3705107362ba,Why do we use chunk overlap in retrieval systems?,summary,gemma3:4b,0.0,9.781,914,685,3,Why do we use chunk overlap in retrieval systems?,"Here’s a summary of the provided context regarding RAG fundamentals, broken down into the requested categories:
 
-2) Evidence:
-   * [Chunk 1: “FAISS is a library for efficient similarity search”]
-   * [Chunk 2: “It’s designed for large-scale vector similarity search”]
-   * [Chunk 3: “FAISS is commonly used to index embeddings”]
+**- Key Points:**
+
+*   **Licenses are Crucial:** The context emphasizes the importance of including a LICENSE file with your project to clearly define usage rights and avoid deterring potential users or contributors.
+*   **RAG Introduction:** The core topic is Retrieval-Augmented Generation (RAG), which is being discussed in the context of building scalable and production-grade agentic pipelines.
+*   **RAG Pipeline Components:** The discussion highlights key elements of a robust RAG pipeline, including autoscaling, evaluation, AI compute, and workflows.
+*   **Staging Area Commits:** A brief note touches on version control terminology – only changes in the staging area are committed.
+
+**- Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):**  Not explicitly defined, but the context indicates it’s a technique that combines retrieval of relevant information with generative AI models.
+*   **Staging Area:** A temporary holding area in version control (like Git) where changes are prepared before being committed.
+
+**- Practical Notes:**
+
+*   **License Clarity:** Prioritize clear and comprehensive licensing to ensure project adoption.
+*   **Scalable RAG Pipelines:**  The focus is on building RAG systems that can handle increased demand and operate reliably.
+
+**- Missing Information / Open Questions:**
+
+*   **Detailed RAG Explanation:** The context doesn’t provide a detailed explanation of *how* RAG works – the specific retrieval methods, the generative model used, or the integration process.
+*   **Specific Technologies:** No mention of particular technologies or frameworks being used for building the RAG pipeline.
+*   **Evaluation Metrics:** The context mentions “evaluation” but doesn’t specify what metrics are being used to assess the RAG pipeline’s performance.",False,False
+858b1adc6e67ac00,Why do we use chunk overlap in retrieval systems?,summary,gemma3:4b,0.2,8.573,914,685,3,Why do we use chunk overlap in retrieval systems?,"Here’s a summary of the provided context regarding RAG fundamentals, broken down into the requested categories:
+
+**- Key Points:**
+
+*   **Licenses are Crucial:** The context emphasizes the importance of including a LICENSE file with your project to clearly define usage rights (commercialization, redistribution, etc.) and avoid deterring potential users or contributors.
+*   **RAG Introduction:** The context introduces Retrieval-Augmented Generation (RAG) as a method for building scalable and production-grade agent pipelines.
+*   **RAG Pipeline Components:** The discussion highlights key elements of a robust RAG pipeline, including autoscaling, evaluation, and AI compute workflows.
+*   **Staging Area Commitments:** The text mentions the concept of staging areas and commits, likely related to version control and development processes.
+
+**- Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):**  Not explicitly defined, but understood as a technique that combines information retrieval with generative AI models. It’s presented as a method for building intelligent agents.
+
+**- Practical Notes:**
+
+*   **License Clarity:**  Prioritize clear and comprehensive licensing to ensure your project is accessible and legally sound.
+*   **Pipeline Design:**  Consider autoscaling, evaluation metrics, and AI compute resources when designing your RAG pipeline for production use.
+
+**- Missing Information / Open Questions:**
+
+*   **Detailed RAG Explanation:** The context doesn’t delve into the specifics of *how* RAG works – the retrieval and generation processes are only briefly mentioned.
+*   **Specific Technologies:** No specific technologies or tools are named within the context.
+*   **Agentic RAG:** The term ""agentic RAG"" is introduced but not fully explained.",False,False
+9d10558102eb42ed,Why do we use chunk overlap in retrieval systems?,reasoning,gemma3:4b,0.0,4.098,985,685,3,Why do we use chunk overlap in retrieval systems?,"1) Answer: The provided text does not explain why chunk overlap is used in retrieval systems. It primarily discusses the importance of a LICENSE file for project usage and outlines a plan for building a scalable RAG pipeline.
+
+2) Evidence: [Chunk 1] discusses the importance of a LICENSE file for users and contributors, but does not mention chunk overlap. [Chunk 2] and [Chunk 3] do not contain information about chunk overlap.
 
 3) Reasoning:
-    * FAISS is used to create an index of text embeddings.
-    * These embeddings represent the semantic meaning of each text chunk.
-    * When a user query is received, it is also converted into an embedding.
-    * FAISS then performs a similarity search to find the chunks with the most similar embeddings to the query embedding.
-    * This identifies the most relevant chunks for the RAG system.
-    * The identified chunks are then used to augment the prompt for the language model.",False,True
-7729965e7b1872ac,What is the role of FAISS in a RAG pipeline?,reasoning,gemma3:4b,0.2,5.64,295,0,0,Explain retrieval augmented generation in simple terms,"1) Answer: FAISS (Facebook AI Similarity Search) plays a crucial role in a Retrieval-Augmented Generation (RAG) pipeline by efficiently indexing and searching a large collection of text chunks for semantic similarity. It allows the RAG system to quickly identify the most relevant chunks from the knowledge base based on the user’s query, rather than relying on keyword matching. This significantly improves the accuracy and relevance of the generated responses.
+*   The text focuses on licensing and pipeline development.
+*   There is no mention of retrieval systems or chunk overlap within the provided context.
+*   Therefore, it’s impossible to derive a reason for using chunk overlap based on this information.",False,True
+87a2b93af4e9a74b,Why do we use chunk overlap in retrieval systems?,reasoning,gemma3:4b,0.2,3.488,985,685,3,Why do we use chunk overlap in retrieval systems?,"1) Answer: The provided context does not explain why chunk overlap is used in retrieval systems. It primarily discusses the importance of LICENSE files for projects and introduces concepts related to RAG pipelines and agentic systems.
 
-2) Evidence:
-   * [Chunk 1: “FAISS is a library for efficient similarity search”]
-   * [Chunk 2: “It’s designed for large-scale vector similarity search”]
-   * [Chunk 3: “FAISS is commonly used to index embeddings”]
+2) Evidence: [Chunk 1] discusses the importance of a LICENSE file for users and contributors, but does not mention chunk overlap. [Chunk 2] and [Chunk 3] do not contain information about chunk overlap.
 
 3) Reasoning:
-    * The system needs to find relevant information quickly.
-    * FAISS is designed for fast similarity search.
-    * It indexes text chunks as vectors.
-    * These vectors represent the semantic meaning of the chunks.
-    * The system uses FAISS to find chunks with similar vectors to the user's query.
-    * This identifies the most relevant chunks for the RAG pipeline.",False,True
-2703eff169ccf493,When would you increase chunk size and why?,qa_strict,gemma3:4b,0.0,0.596,323,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-0fc3d85915f5a04b,When would you increase chunk size and why?,qa_strict,gemma3:4b,0.2,0.452,323,0,0,Explain retrieval augmented generation in simple terms,I don't know based on the provided context.,True,False
-a1d3b4e56bcb75bc,When would you increase chunk size and why?,summary,gemma3:4b,0.0,1.5,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-65d455760e3709a2,When would you increase chunk size and why?,summary,gemma3:4b,0.2,1.411,229,0,0,Explain retrieval augmented generation in simple terms,"Please provide the context about RAG/retrieval fundamentals! I need the text you want me to summarize. Once you paste the context here, I will generate the summary in the requested format (Key points, Definitions, Practical notes, Missing information/open questions).",False,False
-76ab693f74aaa561,When would you increase chunk size and why?,reasoning,gemma3:4b,0.0,4.689,294,0,0,Explain retrieval augmented generation in simple terms,"1) Answer: You would increase chunk size when dealing with data that exhibits strong temporal or spatial correlations, meaning related information tends to occur together. A larger chunk size allows the model to capture these dependencies more effectively, leading to improved performance.
+*   The context focuses on software licensing and system architecture.
+*   There is no mention of retrieval systems or chunk overlap within the provided text.
+*   Therefore, it’s impossible to derive an answer about chunk overlap from this context.",False,True
+7ec56dafa934d2b9,Explain cosine similarity vs dot product similarity for embeddings.,qa_strict,gemma3:4b,0.0,1.036,1246,899,3,Explain cosine similarity vs dot product similarity for embeddings.,I don't know based on the provided context.,True,False
+6c023e8fc15159a7,Explain cosine similarity vs dot product similarity for embeddings.,qa_strict,gemma3:4b,0.2,0.443,1246,899,3,Explain cosine similarity vs dot product similarity for embeddings.,I don't know based on the provided context.,True,False
+1a957e1cea2c36d5,Explain cosine similarity vs dot product similarity for embeddings.,summary,gemma3:4b,0.0,11.591,1128,899,3,Explain cosine similarity vs dot product similarity for embeddings.,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG) fundamentals, based on the chunks provided:
 
-2) Evidence: [Chunk 1] states, “Larger chunks can better represent long-range dependencies in the data.”
+**- Key Points:**
+
+*   **Semantic Similarity Search:** RAG relies on finding information relevant to a query based on *semantic similarity* rather than just keyword matching.
+*   **Embeddings are Central:** The process begins by converting both the query and the knowledge base content into numerical representations called “embeddings.”
+*   **Vector Store:** These embeddings are stored in a “vector store,” which is optimized for efficient similarity searches.
+*   **HyDE Approach:** The HyDE method (mentioned in Chunk 2) uses a Large Language Model (LLM) like GPT3 to generate a “hypothetical” answer, then leverages this answer to drive the embedding search.
+*   **Answer-to-Answer vs. Query-to-Answer:** HyDE performs an “answer-to-answer” embedding similarity search, contrasting with the traditional “query-to-answer” approach in standard RAG.
+
+**- Definitions:**
+
+*   **Embeddings:** Numerical representations of text (documents, sentences, etc.) that capture their semantic meaning. They allow for similarity comparisons.
+*   **Vector Store:** A database specifically designed to store and efficiently search through vector embeddings.
+
+**- Practical Notes:**
+
+*   The context highlights the importance of choosing the right embedding model – the quality of the embeddings directly impacts the accuracy of the retrieval.
+*   The HyDE approach suggests a strategy for using an LLM to refine the retrieval process.
+
+**- Missing Information / Open Questions:**
+
+*   **Specific Vector Store Technologies:** The context doesn’t specify which vector stores are being referenced (e.g., Pinecone, Chroma, Weaviate).
+*   **Details on the LLM’s Role:** More information is needed about how the LLM (GPT3 in this case) contributes to the overall RAG pipeline – specifically, how the “hypothetical” answer is generated and used.
+*   **Scoring Metrics:** The mention of “score” (0.3140, 0.2299, 0.2103) is vague. It’s unclear what these scores represent (e.g., similarity scores, retrieval ranking).",False,False
+e78092d6ef05cd71,Explain cosine similarity vs dot product similarity for embeddings.,summary,gemma3:4b,0.2,11.357,1128,899,3,Explain cosine similarity vs dot product similarity for embeddings.,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG) fundamentals, based on the chunks provided:
+
+**Key Points:**
+
+*   **RAG utilizes embeddings:** The core of RAG involves converting both the question/query and the knowledge base content into numerical representations called embeddings.
+*   **Semantic Similarity Search:** These embeddings are then compared using semantic similarity searches within a vector store. This allows the system to find information based on meaning, not just keyword matches.
+*   **HyDE Approach:** The “HyDE” method (described in Chunk 2) specifically uses a Large Language Model (LLM - GPT3) to generate a “hypothetical” answer before performing the embedding search.
+*   **Answer-to-Answer vs. Query-to-Answer:** The context highlights a distinction between two approaches: “answer to answer” embedding similarity search (as used by HyDE) and the more traditional “query to answer” embedding similarity search.
+
+**Definitions:**
+
+*   **Embeddings:** Numerical representations of text (or other data) that capture semantic meaning. They allow for similarity comparisons.
+*   **Vector Store:** A database optimized for storing and efficiently searching through vector embeddings.
+
+**Practical Notes:**
+
+*   The context suggests that HyDE is a specific implementation of RAG, leveraging an LLM to generate an initial answer before searching.
+*   The scoring (0.3140, 0.2299, 0.2103) likely refers to the similarity scores of the chunks themselves, indicating their relevance to the overall topic.
+
+**Missing Information / Open Questions:**
+
+*   **Details on the Vector Store:** The context doesn’t specify which vector store is being used (e.g., Pinecone, Chroma, FAISS).
+*   **Specifics of the LLM (GPT3):**  More information about how GPT3 is used within the HyDE process would be beneficial.
+*   **Evaluation Metrics:** The context doesn’t mention how the effectiveness of the RAG system is evaluated (e.g., accuracy, recall, precision).",False,False
+7d2b1ca53a006f17,Explain cosine similarity vs dot product similarity for embeddings.,reasoning,gemma3:4b,0.0,6.222,1217,899,3,Explain cosine similarity vs dot product similarity for embeddings.,"1) Answer: Cosine similarity and dot product similarity are both methods used to measure the similarity between embeddings, but they differ in how they account for the magnitude of the vectors. Cosine similarity focuses solely on the angle between the vectors, while dot product similarity considers both the angle and the magnitudes of the vectors.
+
+2) Evidence: [Chunk 2] “These embeddings are then examined within a vector store based on semantic similarity, aiding in the search for relevant information.” and [Chunk 3] “Here we are doing answer to answer embedding similarity search as compared to query to answer embedding similar search in traditional RAG retrieval approach.”
 
 3) Reasoning:
-*   The evidence highlights the importance of capturing “long-range dependencies.”
-*   Long-range dependencies suggest related information isn’t isolated but connected over a significant distance.
-*   Increasing the chunk size accommodates this extended connection.
-*   This allows the model to consider a broader context when processing each chunk.
-*   Therefore, a larger chunk size is beneficial for data with inherent correlations.
-*   Ultimately, it improves the model’s ability to understand the data’s underlying structure.",False,True
-5725700fe74368f4,When would you increase chunk size and why?,reasoning,gemma3:4b,0.2,4.065,294,0,0,Explain retrieval augmented generation in simple terms,"1) Answer: You would increase chunk size when dealing with data that exhibits high autocorrelation or when you need to reduce the computational cost of processing. A larger chunk size allows for more efficient use of algorithms that rely on relationships between data points, and can simplify processing by reducing the number of independent chunks to consider.
+    *   Cosine similarity is based on the angle between vectors, implying it’s insensitive to vector length.
+    *   Dot product similarity measures the overlap in direction and magnitude of vectors.
+    *   Both methods are used to determine semantic similarity within a vector store.
+    *   The context highlights a distinction between “query to answer” and “answer to answer” embedding similarity searches.",False,True
+f52257b946c92e47,Explain cosine similarity vs dot product similarity for embeddings.,reasoning,gemma3:4b,0.2,5.459,1217,899,3,Explain cosine similarity vs dot product similarity for embeddings.,"1) Answer: Cosine similarity and dot product similarity are both methods used to measure the similarity between embeddings, but they differ in how they account for the magnitude of the vectors. Cosine similarity focuses solely on the angle between the vectors, while dot product similarity considers both the angle and the magnitudes of the vectors.
 
-2) Evidence: [Chunk 1] – “high autocorrelation” and [Chunk 2] – “computational cost”
+2) Evidence: [Chunk 2] states, “These embeddings are then examined within a vector store based on semantic similarity, aiding in the search for relevant information.” and [Chunk 3] describes “answer to answer embedding similarity search as compared to query to answer embedding similar search in traditional RAG retrieval approach.”
 
 3) Reasoning:
-*   Autocorrelation suggests that data points within a chunk are strongly related.
-*   Processing a larger chunk leverages these relationships for faster analysis.
-*   Reducing the number of chunks directly lowers the computational burden.
-*   This can improve processing speed and efficiency.
-*   A larger chunk size consolidates related information.
-*   This simplifies the overall analysis process.",False,True
+    *   Cosine similarity is based on the cosine of the angle between vectors, effectively ignoring their lengths.
+    *   Dot product similarity measures the overlap in direction between vectors, influenced by both angle and magnitude.
+    *   Both methods are used to determine semantic similarity within a vector store.
+    *   The context highlights a distinction between searching for answers based on similar answers (answer to answer) versus searching for answers based on a query (query to answer).",False,True
+9947d6374ac96428,What is the role of FAISS in a RAG pipeline?,qa_strict,gemma3:4b,0.0,2.112,1181,857,3,What is the role of FAISS in a RAG pipeline?,"[Chunk 2] But this traditional RAG approach is simple, often with a vector database and a one-shot prompt with context sent to the model to generate output. With the rise of AI agents, agents are now orchestrators of the core RAG components to generation part of the RAG pipeline",False,True
+9569a98e2563ddc2,What is the role of FAISS in a RAG pipeline?,qa_strict,gemma3:4b,0.2,1.567,1181,857,3,What is the role of FAISS in a RAG pipeline?,"[Chunk 2] But this traditional RAG approach is simple, often with a vector database and a one-shot prompt with context sent to the model to generate output. With the rise of AI agents, agents are now orchestrators of the core RAG components to generation part of the RAG pipeline",False,True
+08ab43c3a40204fa,What is the role of FAISS in a RAG pipeline?,summary,gemma3:4b,0.0,8.124,1086,857,3,What is the role of FAISS in a RAG pipeline?,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG) fundamentals, focusing on its connection to agentic workflows:
+
+**Key Points:**
+
+*   **Traditional RAG is Simple:** The standard RAG approach involves a vector database and a single prompt sent to a language model with retrieved context.
+*   **RAG Supports Agentic Workflows:** The rise of AI agents is driving a shift in RAG, where agents now orchestrate the RAG pipeline.
+*   **Agents as Orchestrators:** Agents are taking on the role of managing the core RAG components, like retrieval and generation.
+*   **Ethical Considerations in RAG:** The context briefly touches on the importance of ethical considerations in decision-making, suggesting RAG systems should be designed to handle this responsibly.
+
+**Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):** A technique that combines information retrieval with language model generation to provide more contextually relevant and accurate responses.
+
+**Practical Notes:**
+
+*   The context highlights a move towards more complex RAG implementations driven by the need for AI agents to manage the retrieval and generation processes.
+
+**Missing Information / Open Questions:**
+
+*   The context doesn't delve into *how* agents are specifically orchestrating the RAG pipeline (e.g., what types of decisions are agents making?).
+*   It doesn't provide details on the specific types of AI agents being used in this context.
+*   The brief mention of ethics needs further elaboration – what specific ethical considerations are relevant to RAG systems?",False,False
+cb934c05b5985bb7,What is the role of FAISS in a RAG pipeline?,summary,gemma3:4b,0.2,8.444,1086,857,3,What is the role of FAISS in a RAG pipeline?,"Here’s a summary of the provided context about Retrieval-Augmented Generation (RAG) fundamentals, focusing on its connection to agentic workflows:
+
+**Key Points:**
+
+*   **Traditional RAG is Simple:** The standard RAG approach involves a vector database and a single prompt sent to a language model with retrieved context.
+*   **RAG Supports Agentic Workflows:** The rise of AI agents is changing RAG, with agents now taking on the role of orchestrators within the RAG pipeline.
+*   **Agents Manage RAG Components:** Agents are used to manage the retrieval and generation parts of the RAG process.
+*   **Ethical Considerations in RAG:** The context briefly touches on the importance of ethics, suggesting that RAG systems should be designed to handle information fairly and equitably.
+
+**Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):** A technique that combines information retrieval with language model generation to improve the quality and relevance of generated text.
+
+**Practical Notes:**
+
+*   The context highlights a shift towards using AI agents to manage the complexity of RAG pipelines, suggesting a move beyond the basic one-shot prompt approach.
+
+**Missing Information / Open Questions:**
+
+*   **Specifics of Agent Orchestration:** The text doesn't detail *how* AI agents are currently orchestrating RAG components – what specific tasks are they performing?
+*   **Ethical Frameworks:**  It mentions ethical considerations but doesn’t elaborate on the specific ethical frameworks or guidelines being applied to RAG system design.
+*   **Vector Database Details:** The context doesn't provide details about the types of vector databases used in RAG systems.",False,False
+9d4cfa1f0a9435c2,What is the role of FAISS in a RAG pipeline?,reasoning,gemma3:4b,0.0,5.008,1152,857,3,What is the role of FAISS in a RAG pipeline?,"1) Answer: FAISS is used within a RAG pipeline as part of the generation process, specifically to support agentic workflows. The RAG approach utilizes a vector database and a one-shot prompt with context sent to the model to generate output.
+
+2) Evidence: “[Chunk 2] But this traditional RAG approach is simple, often with a vector database and a one-shot prompt with context sent to the model to generate output.”, “[Chunk 3] Generation part of the RAG pipeline”
+
+3) Reasoning:
+    *   The context describes a “traditional RAG approach.”
+    *   This approach involves a “vector database.”
+    *   The vector database is used for “generation” within the RAG pipeline.
+    *   The RAG pipeline uses a one-shot prompt with context.
+    *   FAISS is a popular library for building vector databases.",False,True
+7729965e7b1872ac,What is the role of FAISS in a RAG pipeline?,reasoning,gemma3:4b,0.2,3.858,1152,857,3,What is the role of FAISS in a RAG pipeline?,"1) Answer: FAISS is used as part of the RAG pipeline to support agentic workflows. It’s often utilized in conjunction with a vector database to efficiently retrieve relevant context for the AI model.
+
+2) Evidence: “[Chunk 2] But this traditional RAG approach is simple, often with a vector database and a one-shot prompt with context sent to the model to generate output.”
+
+3) Reasoning:
+    *   The text states a “traditional RAG approach” utilizes a vector database.
+    *   Vector databases are used for similarity searches.
+    *   FAISS is a popular library for building and searching vector indexes.
+    *   This indexing allows for quick retrieval of relevant information.
+    *   This retrieval is then sent to the model as context.",False,True
+2703eff169ccf493,When would you increase chunk size and why?,qa_strict,gemma3:4b,0.0,0.978,1250,927,3,When would you increase chunk size and why?,I don't know based on the provided context.,True,False
+0fc3d85915f5a04b,When would you increase chunk size and why?,qa_strict,gemma3:4b,0.2,0.449,1250,927,3,When would you increase chunk size and why?,I don't know based on the provided context.,True,False
+a1d3b4e56bcb75bc,When would you increase chunk size and why?,summary,gemma3:4b,0.0,9.532,1156,927,3,When would you increase chunk size and why?,"Here’s a summary of the provided context regarding RAG fundamentals, broken down into the requested categories:
+
+**- Key Points:**
+
+*   **Evaluation is Crucial:**  Successfully deploying any AI application, including those using RAG, requires establishing methods to determine if it’s working effectively. This involves ground truth evaluations.
+*   **Access Control & Auditing:** Google Cloud provides tools like “Access Transparency” and “Access Approval” to monitor and audit employee access to data, particularly important for security and privacy teams.
+*   **Explicit Consent:**  The system emphasizes the importance of obtaining explicit consent for certain actions, highlighting the need for ethical considerations.
+
+**- Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):** While not explicitly defined, the context implies RAG is a type of AI application that utilizes retrieval of information to enhance the generation of responses.
+*   **Access Transparency:** A Google Cloud feature that allows monitoring of employee access to data.
+*   **Access Approval:** A Google Cloud feature that requires explicit approval from support personnel and engineers for certain actions.
+
+**- Practical Notes:**
+
+*   The context suggests a focus on responsible AI deployment, emphasizing the need for robust monitoring, auditing, and consent mechanisms.
+*   Ground truth evaluations are a core component of validating RAG systems.
+
+**- Missing Information / Open Questions:**
+
+*   **Specific RAG Implementation Details:** The context doesn’t detail *how* RAG is implemented or the specific types of queries being evaluated.
+*   **Metrics for Evaluation:** It doesn’t specify what metrics are used to determine if a RAG system is “working” (e.g., accuracy, relevance, latency).
+*   **Ethical Framework:** The quote about ethics is somewhat abstract and doesn’t provide a concrete ethical framework for RAG development or deployment.",False,False
+65d455760e3709a2,When would you increase chunk size and why?,summary,gemma3:4b,0.2,9.2,1156,927,3,When would you increase chunk size and why?,"Here’s a summary of the provided context regarding RAG fundamentals, broken down into the requested categories:
+
+**- Key Points:**
+
+*   **Evaluation is Crucial:**  Successfully deploying any AI application, including those using RAG, requires establishing methods to determine if it’s working effectively. This involves ground truth evaluations.
+*   **Access Control & Auditing:** Google Cloud provides tools like “Access Transparency” and “Access Approval” to monitor and audit employee access to data, addressing security and privacy concerns.
+*   **Explicit Consent:**  The system emphasizes the importance of obtaining explicit consent for certain actions, particularly when it’s deemed “essential.”
+
+**- Definitions:**
+
+*   **RAG (Retrieval-Augmented Generation):**  While not explicitly defined, the context implies RAG is a type of AI application that utilizes retrieval of information to enhance the generation of responses.
+*   **Access Transparency:** A Google Cloud feature that allows monitoring of employee access to data.
+*   **Access Approval:** A Google Cloud feature that requires explicit approval from support personnel and engineers for certain actions.
+
+**- Practical Notes:**
+
+*   The context highlights the need to define and track key metrics to assess the performance of a RAG system.
+*   Security and privacy considerations are paramount, and Google Cloud offers tools to manage and audit access.
+
+**- Missing Information / Open Questions:**
+
+*   **Specific RAG Implementation Details:** The context doesn’t detail *how* RAG is implemented or the specific types of queries being evaluated.
+*   **Ground Truth Evaluation Methods:** It doesn’t elaborate on the methods used for ground truth evaluations (e.g., human evaluation, comparison to a known correct answer).
+*   **Ethical Considerations:** The quote about ethics is a philosophical statement and doesn’t directly relate to the technical aspects of RAG. It suggests a broader consideration of responsible AI development.",False,False
+76ab693f74aaa561,When would you increase chunk size and why?,reasoning,gemma3:4b,0.0,4.994,1221,927,3,When would you increase chunk size and why?,"1) Answer: Increasing chunk size would be beneficial when dealing with complex queries that require a broader context to be accurately answered. It’s important to ensure the model has sufficient information to generate a relevant response, and a larger chunk size provides more of that context.
+
+2) Evidence: [Chunk 1] states, “In order to properly deploy any application, you need to know when it's working.” This implies a need for sufficient information to assess the application’s performance.
+
+3) Reasoning:
+    *   Complex queries often require more detailed information.
+    *   A larger chunk size provides more context for the model to process.
+    *   This can lead to more accurate and comprehensive responses.
+    *   Without sufficient context, the model may struggle to understand the nuances of the query.
+    *   Therefore, increasing chunk size improves the chances of the application “working” as intended.",False,True
+5725700fe74368f4,When would you increase chunk size and why?,reasoning,gemma3:4b,0.2,4.524,1221,927,3,When would you increase chunk size and why?,"1) Answer: Increasing chunk size would be beneficial when dealing with complex queries that require a broader context to be accurately answered. It’s important to ensure the model has sufficient information to generate a relevant response, and a larger chunk size provides more data for the model to process.
+
+2) Evidence: [Chunk 1] states, “In order to properly deploy any application, you need to know when it's working.” This implies a need for sufficient context to ensure the application, and by extension a RAG system, is functioning correctly.
+
+3) Reasoning:
+    *   Complex queries often necessitate more context.
+    *   More context allows the model to better understand the nuances of the question.
+    *   A larger chunk size provides the model with a greater amount of relevant information.
+    *   This can improve the accuracy and completeness of the response.
+    *   Ultimately, it contributes to verifying the system is working as intended.",False,True

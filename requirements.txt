@@ -12,5 +12,3 @@ pypdf
 requests
 python-dotenv
 tqdm
-pathlib
-typing

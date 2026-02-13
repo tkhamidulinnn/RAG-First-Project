@@ -1,0 +1,6 @@
+decision,value,basis
+chunking_config,"{'chunk_size': 300, 'chunk_overlap': 50}",fixed in Week 2 pipeline
+preferred_model_from_week1,all-mpnet-base-v2,Week 1 quality winner
+operational_model_week2,hashing-768-stable,runtime stability in Python 3.13 Jupyter
+model_policy,stability_fallback,MPNet path caused native kernel crash
+metric,cosine_equivalent,normalized vectors + FAISS IndexFlatIP
