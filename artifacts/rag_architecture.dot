@@ -1,0 +1,23 @@
+digraph RAGArchitecture {
+  rankdir=LR;
+  graph [fontname="Helvetica"];
+  node [shape=box, style="rounded,filled", color="#2b2b2b", fillcolor="#f5f5f5", fontname="Helvetica"];
+  edge [fontname="Helvetica", color="#2b2b2b"];
+
+  UserQuery [label="User Query"];
+  Recover [label="RAG.retrieve()\\nrecover(query, top_k)"];
+  VectorDB [label="VectorDatabase\\nFAISS + Hashing(768)"];
+  Prompt [label="Build Prompt\\n(grounded context)"];
+  Guardrails [label="Guardrails\\npre + post checks"];
+  LLM [label="Local LLM\\n(Ollama)"];
+  Answer [label="Answer + Citations"];
+  Blocked [label="Blocked Response\\n(Insufficient evidence / policy)"];
+
+  UserQuery -> Recover;
+  Recover -> VectorDB;
+  VectorDB -> Prompt;
+  Prompt -> Guardrails;
+  Guardrails -> LLM [label="allowed"];
+  Guardrails -> Blocked [label="blocked"];
+  LLM -> Answer;
+}
