@@ -1,0 +1,15 @@
+{
+  "llm_called": true,
+  "model": "gemma3:4b",
+  "temperature": 0.2,
+  "answer_preview": "RAG makes LLMs better and equal [Chunk 1]. RAG Chunking Techniques for Tabular Data: 10 Powerful… [Chunk 2]. architecture is straightforward and predictable, making it suitable for many applications where the retrieval of relevant documents is a clear prerequisite for generating an answer [Chunk 3].",
+  "timings": {
+    "ingest_ms": 4011.633,
+    "chunking_ms": 2.112,
+    "embed_ms": 8.8,
+    "index_add_ms": 0.705,
+    "query_embed_ms": 0.304,
+    "faiss_search_ms": 2.763,
+    "llm_ms": 2881.03
+  }
+}

@@ -1,0 +1,8 @@
+query,variant,error,answer,context_topics
+What is RAG?,baseline,,RAG makes LLMs better and equal.,"RAG,RAG,RAG"
+What is RAG?,optimized,,RAG makes LLMs better and equal [Chunk 1].,"RAG,RAG,RAG"
+How to create a git branch?,baseline,,"git branch [branch-name]
+create a new branch at the current commit","GIT,GIT,GIT"
+How to create a git branch?,optimized,,git branch [branch-name] [Chunk 1],"GIT,GIT,GIT"
+What is Google Cloud Platform?,baseline,,Google Cloud is mentioned in both Chunk 1 and Chunk 2 of the google_security_wp.pdf document.,"GCP,GCP,GIT"
+What is Google Cloud Platform?,optimized,,Insufficient evidence in retrieved context.,"GCP,GCP,GIT"

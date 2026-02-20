@@ -1,0 +1,6 @@
+{
+  "embedding_dim": 768,
+  "chunk_size": 300,
+  "chunk_overlap": 50,
+  "max_pages_per_pdf": 20
+}

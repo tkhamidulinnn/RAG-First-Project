@@ -1,0 +1,6 @@
+{
+  "ingest_ms": 4011.633,
+  "chunking_ms": 2.112,
+  "embed_ms": 8.8,
+  "index_add_ms": 0.705
+}
