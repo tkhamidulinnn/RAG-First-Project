@@ -1,0 +1,20 @@
+{
+  "query": "What is RAG?",
+  "top_k": 3,
+  "hits": [
+    {
+      "rank": 1,
+      "doc_id": "readme",
+      "chunk_id": 0,
+      "score": 0.14002801477909088,
+      "text_preview": "RAG stands for Retrieval-Augmented Generation. It combines a retriever (e.g. vector search) with a generator (LLM). You index documents into vectors, then for each query you retrie..."
+    }
+  ],
+  "timings": {
+    "ingest_ms": 0.38,
+    "embed_ms": 0.202,
+    "index_add_ms": 0.034,
+    "query_embed_ms": 0.084,
+    "search_ms": 0.962
+  }
+}

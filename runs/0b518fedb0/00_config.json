@@ -1,0 +1,7 @@
+{
+  "embedding_model": "hashing-768-stable",
+  "embedding_dim": 768,
+  "chunk_size": 300,
+  "chunk_overlap": 50,
+  "top_k_default": 3
+}

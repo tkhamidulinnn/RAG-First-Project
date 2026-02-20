@@ -1,0 +1,41 @@
+{
+  "query": "How to use GIT?",
+  "top_k": 3,
+  "results": [
+    {
+      "rank": 1,
+      "score": 0.6805,
+      "source": "How_to_Git.pdf",
+      "topic": "GIT",
+      "page": 19,
+      "chunk_id": 275,
+      "text_preview": "\u0000. Use git status to show file status \u0000. Use git add to add the readme file and use git status again to check filestatus\u0000. Use git commit -m \"COMMIT_MESSAGE\" to commit and use git "
+    },
+    {
+      "rank": 2,
+      "score": 0.5,
+      "source": "GitGuide.pdf",
+      "topic": "GIT",
+      "page": 0,
+      "chunk_id": 202,
+      "text_preview": "Beginner’s   Guide   to   using   Git   Written   By:   Kyle   Swygert   Voiland   College   Tutoring   Services   WSU   CptS   223   and   onward    What   is   Git?   Git   is   "
+    },
+    {
+      "rank": 3,
+      "score": 0.4725,
+      "source": "How_to_Git.pdf",
+      "topic": "GIT",
+      "page": 18,
+      "chunk_id": 272,
+      "text_preview": "git status: show file status (untracked, modified, committed, etc.) git add FILENAME: add untracked files to staging area use git add . or git add --all to add all untracked files "
+    }
+  ],
+  "timings": {
+    "ingest_ms": 4000.727,
+    "chunk_ms": 2.391,
+    "embed_ms": 6.902,
+    "index_ms": 0.178,
+    "query_embed_ms": 1.332,
+    "search_ms": 0.165
+  }
+}

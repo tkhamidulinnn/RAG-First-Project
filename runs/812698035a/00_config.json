@@ -1,0 +1,6 @@
+{
+  "data_path": "data",
+  "dim": 65536,
+  "n_chunks": 1,
+  "chunk_policy": "1_file_1_chunk"
+}

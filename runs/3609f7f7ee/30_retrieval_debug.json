@@ -1,0 +1,41 @@
+{
+  "query": "What is RAG?",
+  "top_k": 3,
+  "results": [
+    {
+      "rank": 1,
+      "score": 0.4629,
+      "source": "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf",
+      "topic": "RAG",
+      "page": 3,
+      "chunk_id": 832,
+      "text_preview": "RAG makes LLMs better and equal Amnon, Roy, Ilai, Nathan, Amir Products Vector Database Dedicated Read Nodes Assistant Documentation Pricing Security Integrations Resources Communi"
+    },
+    {
+      "rank": 2,
+      "score": 0.3825,
+      "source": "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
+      "topic": "RAG",
+      "page": 17,
+      "chunk_id": 727,
+      "text_preview": "Graph and Llama-Index Introduction Dec 3, 2023 In by Semantic Chunking for RAG What is Chunking ? Apr 21, 2024 In by RAG Chunking Techniques for Tabular Data: 10 Powerful… Level Up"
+    },
+    {
+      "rank": 3,
+      "score": 0.379,
+      "source": "Retrieval - Docs by LangChain.pdf",
+      "topic": "RAG",
+      "page": 1,
+      "chunk_id": 749,
+      "text_preview": "architecture is straightforward and predictable, making it suitable for many applications where the retrieval of relevant documents is a clear prerequisite for generating an answer"
+    }
+  ],
+  "timings": {
+    "ingest_ms": 4109.302,
+    "chunk_ms": 2.483,
+    "embed_ms": 8.767,
+    "index_ms": 0.597,
+    "query_embed_ms": 0.2,
+    "search_ms": 2.596
+  }
+}

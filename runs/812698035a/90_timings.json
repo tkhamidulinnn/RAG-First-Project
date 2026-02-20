@@ -1,0 +1,7 @@
+{
+  "ingest_ms": 0.396,
+  "embed_ms": 1.405,
+  "index_add_ms": 0.28,
+  "query_embed_ms": 0.049,
+  "search_ms": 0.008
+}

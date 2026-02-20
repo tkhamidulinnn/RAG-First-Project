@@ -1,0 +1,9 @@
+{
+  "errors": [
+    {
+      "source": "A-Complete-Guide-to-the-Google-Cloud-Platform.pdf",
+      "error": "Cannot find Root object in pdf"
+    }
+  ],
+  "n_errors": 1
+}

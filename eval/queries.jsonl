@@ -1,0 +1,5 @@
+{"query": "What is RAG?", "expected_doc": "readme"}
+{"query": "How does retrieval work with vectors?", "expected_doc": "readme"}
+{"query": "What is chunking?", "expected_doc": "readme"}
+{"query": "Explain retrieval augmented generation in simple terms", "expected_doc": "readme"}
+{"query": "What is the role of context in RAG?", "expected_doc": "readme"}
