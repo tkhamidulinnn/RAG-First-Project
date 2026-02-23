@@ -1,0 +1,24 @@
+{"id": "rag1", "query": "What is RAG?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["Retrieval-Augmented Generation", "retriever", "generator"]}
+{"id": "rag2", "query": "How does retrieval work with vectors?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["vector", "retrieve", "index"]}
+{"id": "rag3", "query": "What is chunking?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["chunking", "chunks", "splits"]}
+{"id": "rag4", "query": "Explain retrieval augmented generation in simple terms", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["RAG", "retrieval", "generation"]}
+{"id": "rag5", "query": "What is the role of context in RAG?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["context", "chunks", "LLM"]}
+{"id": "rag6", "query": "How do you index documents for retrieval?", "topic": "RAG", "gold_keywords": ["index", "vectors", "documents"]}
+{"id": "rag7", "query": "What is FAISS used for?", "topic": "RAG", "gold_keywords": ["FAISS", "vector", "search"]}
+{"id": "rag8", "query": "What are embeddings in a RAG pipeline?", "topic": "RAG", "gold_keywords": ["embed", "vector", "chunk"]}
+{"id": "git1", "query": "How do I create a new branch in Git?", "topic": "GIT", "gold_sources": ["git"], "gold_keywords": ["branch", "checkout"]}
+{"id": "git2", "query": "What is git merge?", "topic": "GIT", "gold_sources": ["git"], "gold_keywords": ["merge", "branch"]}
+{"id": "git3", "query": "Explain git rebase", "topic": "GIT", "gold_sources": ["git"], "gold_keywords": ["rebase", "commit"]}
+{"id": "git4", "query": "How to push to remote repository?", "topic": "GIT", "gold_sources": ["git"], "gold_keywords": ["push", "remote"]}
+{"id": "git5", "query": "What is a commit in Git?", "topic": "GIT", "gold_sources": ["git"], "gold_keywords": ["commit", "history"]}
+{"id": "gcp1", "query": "How to use gcloud CLI?", "topic": "GCP", "gold_sources": ["gcloud", "cheat-sheet"], "gold_keywords": ["gcloud", "command"]}
+{"id": "gcp2", "query": "GCP deployment options", "topic": "GCP", "gold_sources": ["gcloud", "GCP"], "gold_keywords": ["deploy", "cloud"]}
+{"id": "gcp3", "query": "Running containers on Google Cloud", "topic": "GCP", "gold_sources": ["gcloud", "GCP"], "gold_keywords": ["container", "cloud"]}
+{"id": "gcp4", "query": "Google Cloud cheat sheet commands", "topic": "GCP", "gold_sources": ["gcloud-cheat-sheet", "cheat-sheet"], "gold_keywords": ["gcloud"]}
+{"id": "gcp5", "query": "How to authenticate with GCP?", "topic": "GCP", "gold_sources": ["gcloud"], "gold_keywords": ["auth", "gcloud"]}
+{"id": "gcp6", "query": "List resources in Google Cloud project", "topic": "GCP", "gold_sources": ["gcloud"], "gold_keywords": ["project", "list"]}
+{"id": "rag9", "query": "Top-k retrieval in RAG", "topic": "RAG", "gold_keywords": ["top", "retrieve", "chunk"]}
+{"id": "gcp7", "query": "gcloud config and setup", "topic": "GCP", "gold_sources": ["gcloud-cheat-sheet"], "gold_keywords": ["config", "gcloud"]}
+{"id": "out1", "query": "What is the capital of France?"}
+{"id": "out2", "query": "Who won FIFA World Cup 2022?"}
+{"id": "out3", "query": "Recipe for chocolate cake"}

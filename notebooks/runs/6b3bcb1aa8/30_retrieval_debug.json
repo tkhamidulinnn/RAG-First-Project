@@ -1,0 +1,35 @@
+{
+  "query": "What is retreival augemented generation?",
+  "top_k": 3,
+  "results": [
+    {
+      "rank": 1,
+      "score": 0.3262,
+      "source": "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf",
+      "topic": "RAG",
+      "chunk_id": 714
+    },
+    {
+      "rank": 2,
+      "score": 0.2887,
+      "source": "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
+      "topic": "RAG",
+      "chunk_id": 531
+    },
+    {
+      "rank": 3,
+      "score": 0.2828,
+      "source": "How_to_Git.pdf",
+      "topic": "GIT",
+      "chunk_id": 810
+    }
+  ],
+  "timings": {
+    "ingest_ms": 4268.91,
+    "chunk_ms": 11.762,
+    "embed_ms": 9.509,
+    "index_ms": 0.56,
+    "query_embed_ms": 1.112,
+    "search_ms": 0.302
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "data_path": "../data",
+  "n_pages": 126,
+  "n_chunks": 879,
+  "ntotal": 879,
+  "sources": [
+    {
+      "source": "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
+      "pages": 19,
+      "chunks": 365
+    },
+    {
+      "source": "GitGuide.pdf",
+      "pages": 8,
+      "chunks": 35
+    },
+    {
+      "source": "How_to_Git.pdf",
+      "pages": 45,
+      "chunks": 73
+    },
+    {
+      "source": "Introduction to GCP.pdf",
+      "pages": 25,
+      "chunks": 103
+    },
+    {
+      "source": "Retrieval - Docs by LangChain.pdf",
+      "pages": 3,
+      "chunks": 31
+    },
+    {
+      "source": "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf",
+      "pages": 4,
+      "chunks": 58
+    },
+    {
+      "source": "gcloud-cheat-sheet.pdf",
+      "pages": 2,
+      "chunks": 49
+    },
+    {
+      "source": "git-cheat-sheet-education.pdf",
+      "pages": 2,
+      "chunks": 18
+    },
+    {
+      "source": "google_security_wp.pdf",
+      "pages": 18,
+      "chunks": 147
+    }
+  ]
+}

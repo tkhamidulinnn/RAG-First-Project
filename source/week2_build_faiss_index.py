@@ -219,12 +219,12 @@ def make_chunks(docs, cfg):
 
 
 # ============================================================
-# FAISS Index (cosine similarity via normalized embeddings)
+# FAISS Index (inner product)
 # ============================================================
 
 def build_index(texts, model_name):
     model = SentenceTransformer(model_name)
-    emb = model.encode(texts, normalize_embeddings=True)
+    emb = model.encode(texts, normalize_embeddings=False)
     emb = np.array(emb, dtype="float32")
     index = faiss.IndexFlatIP(emb.shape[1])
     index.add(emb)
@@ -232,7 +232,7 @@ def build_index(texts, model_name):
 
 
 def retrieve(model, index, query, top_k):
-    q = model.encode([query], normalize_embeddings=True)
+    q = model.encode([query], normalize_embeddings=False)
     q = np.array(q, dtype="float32")
     scores, idxs = index.search(q, top_k)
     return scores[0], idxs[0]

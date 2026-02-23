@@ -146,13 +146,13 @@ def chunk_docs(docs: list, chunk_size: int, overlap: int) -> list:
 # =============================================================================
 
 def normalize_vectors(v: np.ndarray) -> np.ndarray:
-    """L2 normalize vectors. Handles both 1D and 2D arrays."""
+    """Normalize vectors to unit length. Handles both 1D and 2D arrays."""
     if v.ndim == 1:
         return v / (np.linalg.norm(v) + 1e-9)
     return v / (np.linalg.norm(v, axis=1, keepdims=True) + 1e-9)
 
 def cosine_similarity(doc_emb: np.ndarray, query_emb: np.ndarray) -> np.ndarray:
-    """Cosine similarity = dot product of normalized vectors."""
+    """Cosine similarity = dot product of unit-length vectors."""
     doc_norm = normalize_vectors(doc_emb)
     query_norm = normalize_vectors(query_emb)
     return doc_norm @ query_norm

@@ -28,7 +28,7 @@ data/<topic>/*.pdf
         ▼  chunk (300 chars / 50 overlap)
    DocumentChunk list
         │
-        ▼  embed (HashingVectorizer 768-dim, L2-norm)
+        ▼  embed (HashingVectorizer 768-dim)
    float32 vectors
         │
         ▼  index (FAISS IndexFlatIP)
@@ -148,7 +148,7 @@ Each run has a unique `run_id` — artifacts never overwrite each other.
 | Decision | Reason |
 |----------|--------|
 | `HashingVectorizer` instead of transformers | No OOM risk; deterministic; zero cold-start |
-| `FAISS IndexFlatIP` + L2-norm | Exact cosine search; no training required |
+| `FAISS IndexFlatIP` | Inner product; no training required |
 | Guardrails before and after LLM | Block PII, injection, toxicity, ambiguous retrieval, data leakage |
 | Artifacts per run | Full auditability; every past run is inspectable |
 | Topic label from folder name | Deterministic; no NLP required at ingest time |
