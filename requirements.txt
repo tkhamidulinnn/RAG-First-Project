@@ -1,5 +1,6 @@
 ipykernel
 ipywidgets
+scikit-learn
 sentence-transformers
 numpy
 pandas
