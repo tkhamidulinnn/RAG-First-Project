@@ -1,6 +1,7 @@
 {
   "query": "What is retreival augemented generation?",
   "top_k": 3,
+  "topic": null,
   "results": [
     {
       "rank": 1,
@@ -25,11 +26,11 @@
     }
   ],
   "timings": {
-    "ingest_ms": 4268.91,
-    "chunk_ms": 11.762,
-    "embed_ms": 9.509,
-    "index_ms": 0.56,
-    "query_embed_ms": 1.112,
-    "search_ms": 0.302
+    "ingest_ms": 4396.188,
+    "chunk_ms": 11.44,
+    "embed_ms": 7.31,
+    "index_ms": 0.211,
+    "query_embed_ms": 0.326,
+    "search_ms": 0.094
   }
 }

@@ -1,0 +1,5 @@
+decision,value,basis
+chunking_config,"{'chunk_size': 300, 'chunk_overlap': 50}",fixed in Week 2 pipeline
+runtime_model_week2,hashing-768-stable,stable local execution in Python 3.13 Jupyter
+metric,cosine_equivalent,FAISS IndexFlatIP
+handoff_policy,reuse_runtime_retriever_in_week3_week4,cross-week consistency

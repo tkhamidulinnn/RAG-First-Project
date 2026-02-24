@@ -1,0 +1,2 @@
+top1_accuracy,top3_hit_rate,avg_top1_score,chunk_size,chunk_overlap
+0.8,0.8,0.4831,300,50

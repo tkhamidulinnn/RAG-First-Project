@@ -1,45 +1,27 @@
 {
   "n": 24,
   "skipped": 0,
-  "hit@1_mean": 0.5238,
-  "hit@3_mean": 0.619,
-  "hit@5_mean": 0.7143,
-  "mrr@5_mean": 0.5873,
+  "hit@1_mean": 0.619,
+  "hit@3_mean": 0.6667,
+  "hit@5_mean": 0.7619,
+  "mrr@5_mean": 0.6643,
   "failures": [
     {
       "id": "rag3",
       "query": "What is chunking?",
       "top_sources": [
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
-        "How_to_Git.pdf",
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
+        "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf",
         "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf",
         "Retrieval-Augmented Generation (RAG) _ Pinecone.pdf"
       ],
       "top_chunk_ids": [
         531,
-        810,
         526,
         709,
-        712
-      ]
-    },
-    {
-      "id": "rag7",
-      "query": "What is FAISS used for?",
-      "top_sources": [
-        "How_to_Git.pdf",
-        "Introduction to GCP.pdf",
-        "google_security_wp.pdf",
-        "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
-        "How_to_Git.pdf"
-      ],
-      "top_chunk_ids": [
-        809,
-        45,
-        202,
-        531,
-        810
+        712,
+        729
       ]
     },
     {
@@ -48,16 +30,16 @@
       "top_sources": [
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
-        "Introduction to GCP.pdf",
+        "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf",
         "Advanced RAG — Improving retrieval using Hypothetical Document Embeddings(HyDE) _ by Plaban Nayak _ AI Planet.pdf"
       ],
       "top_chunk_ids": [
         660,
         511,
-        83,
         471,
-        422
+        422,
+        662
       ]
     },
     {

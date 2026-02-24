@@ -1,1 +1,0 @@
-RAG stands for Retrieval-Augmented Generation. It combines a retriever (e.g. vector search) with a generator (LLM). You index documents into vectors, then for each query you retrieve the top-k chunks and pass them as context to the model. Chunking splits documents into smaller pieces; one common approach is one file per chunk for simplicity.
