@@ -1,0 +1,201 @@
+query,iter,total_ms
+What is RAG?,1,1.016
+What is RAG?,2,0.699
+What is RAG?,3,0.636
+What is RAG?,4,0.639
+What is RAG?,5,0.592
+What is RAG?,6,0.952
+What is RAG?,7,1.309
+What is RAG?,8,0.758
+What is RAG?,9,0.643
+What is RAG?,10,0.55
+What is RAG?,11,0.556
+What is RAG?,12,0.746
+What is RAG?,13,0.813
+What is RAG?,14,1.171
+What is RAG?,15,0.727
+What is RAG?,16,0.547
+What is RAG?,17,0.541
+What is RAG?,18,0.552
+What is RAG?,19,0.756
+What is RAG?,20,0.531
+How does retrieval-augmented generation work?,1,0.529
+How does retrieval-augmented generation work?,2,0.482
+How does retrieval-augmented generation work?,3,0.51
+How does retrieval-augmented generation work?,4,0.475
+How does retrieval-augmented generation work?,5,0.842
+How does retrieval-augmented generation work?,6,0.683
+How does retrieval-augmented generation work?,7,0.449
+How does retrieval-augmented generation work?,8,0.404
+How does retrieval-augmented generation work?,9,0.388
+How does retrieval-augmented generation work?,10,0.427
+How does retrieval-augmented generation work?,11,0.432
+How does retrieval-augmented generation work?,12,0.422
+How does retrieval-augmented generation work?,13,0.423
+How does retrieval-augmented generation work?,14,0.425
+How does retrieval-augmented generation work?,15,0.391
+How does retrieval-augmented generation work?,16,0.414
+How does retrieval-augmented generation work?,17,0.414
+How does retrieval-augmented generation work?,18,0.417
+How does retrieval-augmented generation work?,19,0.412
+How does retrieval-augmented generation work?,20,0.393
+How to create a git branch?,1,0.389
+How to create a git branch?,2,0.341
+How to create a git branch?,3,0.365
+How to create a git branch?,4,0.383
+How to create a git branch?,5,0.389
+How to create a git branch?,6,0.377
+How to create a git branch?,7,0.373
+How to create a git branch?,8,0.375
+How to create a git branch?,9,0.391
+How to create a git branch?,10,0.366
+How to create a git branch?,11,0.406
+How to create a git branch?,12,0.373
+How to create a git branch?,13,0.362
+How to create a git branch?,14,0.372
+How to create a git branch?,15,0.348
+How to create a git branch?,16,0.324
+How to create a git branch?,17,0.327
+How to create a git branch?,18,0.353
+How to create a git branch?,19,0.359
+How to create a git branch?,20,0.353
+What is the difference between git merge and git rebase?,1,0.369
+What is the difference between git merge and git rebase?,2,0.34
+What is the difference between git merge and git rebase?,3,0.361
+What is the difference between git merge and git rebase?,4,0.358
+What is the difference between git merge and git rebase?,5,0.344
+What is the difference between git merge and git rebase?,6,0.352
+What is the difference between git merge and git rebase?,7,0.34
+What is the difference between git merge and git rebase?,8,0.308
+What is the difference between git merge and git rebase?,9,0.347
+What is the difference between git merge and git rebase?,10,0.333
+What is the difference between git merge and git rebase?,11,0.322
+What is the difference between git merge and git rebase?,12,0.336
+What is the difference between git merge and git rebase?,13,0.326
+What is the difference between git merge and git rebase?,14,0.311
+What is the difference between git merge and git rebase?,15,0.332
+What is the difference between git merge and git rebase?,16,0.339
+What is the difference between git merge and git rebase?,17,0.342
+What is the difference between git merge and git rebase?,18,0.348
+What is the difference between git merge and git rebase?,19,0.311
+What is the difference between git merge and git rebase?,20,0.337
+What is Google Cloud Platform?,1,1.432
+What is Google Cloud Platform?,2,5.724
+What is Google Cloud Platform?,3,1.632
+What is Google Cloud Platform?,4,0.806
+What is Google Cloud Platform?,5,1.057
+What is Google Cloud Platform?,6,1.107
+What is Google Cloud Platform?,7,1.276
+What is Google Cloud Platform?,8,1.108
+What is Google Cloud Platform?,9,1.211
+What is Google Cloud Platform?,10,1.322
+What is Google Cloud Platform?,11,1.364
+What is Google Cloud Platform?,12,1.031
+What is Google Cloud Platform?,13,0.946
+What is Google Cloud Platform?,14,1.813
+What is Google Cloud Platform?,15,1.008
+What is Google Cloud Platform?,16,1.708
+What is Google Cloud Platform?,17,0.698
+What is Google Cloud Platform?,18,0.374
+What is Google Cloud Platform?,19,0.308
+What is Google Cloud Platform?,20,0.281
+How do I deploy a container on GCP?,1,0.276
+How do I deploy a container on GCP?,2,0.272
+How do I deploy a container on GCP?,3,0.276
+How do I deploy a container on GCP?,4,0.275
+How do I deploy a container on GCP?,5,0.569
+How do I deploy a container on GCP?,6,0.33
+How do I deploy a container on GCP?,7,0.295
+How do I deploy a container on GCP?,8,0.333
+How do I deploy a container on GCP?,9,0.485
+How do I deploy a container on GCP?,10,0.465
+How do I deploy a container on GCP?,11,1.444
+How do I deploy a container on GCP?,12,2.822
+How do I deploy a container on GCP?,13,1.34
+How do I deploy a container on GCP?,14,0.489
+How do I deploy a container on GCP?,15,0.31
+How do I deploy a container on GCP?,16,0.272
+How do I deploy a container on GCP?,17,0.261
+How do I deploy a container on GCP?,18,0.259
+How do I deploy a container on GCP?,19,0.258
+How do I deploy a container on GCP?,20,0.256
+What are the advantages of using a vector database?,1,0.274
+What are the advantages of using a vector database?,2,0.262
+What are the advantages of using a vector database?,3,0.274
+What are the advantages of using a vector database?,4,0.272
+What are the advantages of using a vector database?,5,0.265
+What are the advantages of using a vector database?,6,0.263
+What are the advantages of using a vector database?,7,0.282
+What are the advantages of using a vector database?,8,0.258
+What are the advantages of using a vector database?,9,0.266
+What are the advantages of using a vector database?,10,0.256
+What are the advantages of using a vector database?,11,0.264
+What are the advantages of using a vector database?,12,0.259
+What are the advantages of using a vector database?,13,0.256
+What are the advantages of using a vector database?,14,0.258
+What are the advantages of using a vector database?,15,0.259
+What are the advantages of using a vector database?,16,0.353
+What are the advantages of using a vector database?,17,0.412
+What are the advantages of using a vector database?,18,0.307
+What are the advantages of using a vector database?,19,0.298
+What are the advantages of using a vector database?,20,0.289
+What is the difference between BM25 and dense retrieval?,1,0.281
+What is the difference between BM25 and dense retrieval?,2,0.267
+What is the difference between BM25 and dense retrieval?,3,0.27
+What is the difference between BM25 and dense retrieval?,4,0.268
+What is the difference between BM25 and dense retrieval?,5,0.273
+What is the difference between BM25 and dense retrieval?,6,0.273
+What is the difference between BM25 and dense retrieval?,7,0.281
+What is the difference between BM25 and dense retrieval?,8,0.259
+What is the difference between BM25 and dense retrieval?,9,0.261
+What is the difference between BM25 and dense retrieval?,10,0.303
+What is the difference between BM25 and dense retrieval?,11,0.285
+What is the difference between BM25 and dense retrieval?,12,0.265
+What is the difference between BM25 and dense retrieval?,13,0.257
+What is the difference between BM25 and dense retrieval?,14,0.267
+What is the difference between BM25 and dense retrieval?,15,0.368
+What is the difference between BM25 and dense retrieval?,16,0.298
+What is the difference between BM25 and dense retrieval?,17,0.288
+What is the difference between BM25 and dense retrieval?,18,0.285
+What is the difference between BM25 and dense retrieval?,19,0.275
+What is the difference between BM25 and dense retrieval?,20,0.269
+What is the capital of France?,1,0.269
+What is the capital of France?,2,0.271
+What is the capital of France?,3,0.268
+What is the capital of France?,4,0.274
+What is the capital of France?,5,0.266
+What is the capital of France?,6,0.276
+What is the capital of France?,7,0.28
+What is the capital of France?,8,0.267
+What is the capital of France?,9,0.263
+What is the capital of France?,10,0.272
+What is the capital of France?,11,0.263
+What is the capital of France?,12,0.267
+What is the capital of France?,13,0.267
+What is the capital of France?,14,0.272
+What is the capital of France?,15,0.261
+What is the capital of France?,16,0.261
+What is the capital of France?,17,0.256
+What is the capital of France?,18,0.265
+What is the capital of France?,19,0.273
+What is the capital of France?,20,0.252
+Who won the FIFA World Cup in 2022?,1,0.256
+Who won the FIFA World Cup in 2022?,2,0.268
+Who won the FIFA World Cup in 2022?,3,0.262
+Who won the FIFA World Cup in 2022?,4,0.26
+Who won the FIFA World Cup in 2022?,5,0.271
+Who won the FIFA World Cup in 2022?,6,0.265
+Who won the FIFA World Cup in 2022?,7,0.262
+Who won the FIFA World Cup in 2022?,8,0.265
+Who won the FIFA World Cup in 2022?,9,0.262
+Who won the FIFA World Cup in 2022?,10,0.263
+Who won the FIFA World Cup in 2022?,11,0.263
+Who won the FIFA World Cup in 2022?,12,0.255
+Who won the FIFA World Cup in 2022?,13,0.253
+Who won the FIFA World Cup in 2022?,14,0.258
+Who won the FIFA World Cup in 2022?,15,0.276
+Who won the FIFA World Cup in 2022?,16,0.267
+Who won the FIFA World Cup in 2022?,17,0.341
+Who won the FIFA World Cup in 2022?,18,0.311
+Who won the FIFA World Cup in 2022?,19,0.318
+Who won the FIFA World Cup in 2022?,20,0.271

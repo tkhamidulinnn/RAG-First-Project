@@ -1,0 +1,9 @@
+query,Hit@3,Prec@3,n_labeled
+How do I deploy a container on GCP?,1,0.667,3
+How does retrieval-augmented generation work?,1,1.0,3
+How to create a git branch?,1,1.0,3
+What are the advantages of using a vector database?,1,1.0,3
+What is Google Cloud Platform?,1,1.0,3
+What is RAG?,1,0.667,3
+What is the difference between BM25 and dense retrieval?,0,0.0,3
+What is the difference between git merge and git rebase?,1,1.0,3

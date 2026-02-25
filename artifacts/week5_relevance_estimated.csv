@@ -1,0 +1,11 @@
+query,Hit@3,Prec@3,out_of_scope
+How do I deploy a container on GCP?,1,0.667,False
+How does retrieval-augmented generation work?,1,1.0,False
+How to create a git branch?,1,1.0,False
+What are the advantages of using a vector database?,1,1.0,False
+What is Google Cloud Platform?,1,1.0,False
+What is RAG?,1,0.667,False
+What is the capital of France?,0,0.0,True
+What is the difference between BM25 and dense retrieval?,0,0.0,False
+What is the difference between git merge and git rebase?,1,1.0,False
+Who won the FIFA World Cup in 2022?,0,0.0,True

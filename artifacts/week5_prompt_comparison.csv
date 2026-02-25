@@ -1,0 +1,8 @@
+query,variant,error,answer,topics
+What is RAG?,baseline,,"architecture is straightforward and predictable, making it suitable for many applications where the retrieval of relevant documents is a clear prerequisite for generating an answer.","RAG,RAG,GIT"
+What is RAG?,grounded,,Insufficient evidence in retrieved context.,"RAG,RAG,GIT"
+How to create a git branch?,baseline,,"git branch [branch-name]
+create a new branch at the current commit","GIT,GIT,GIT"
+How to create a git branch?,grounded,,git branch [branch-name] [Chunk 1],"GIT,GIT,GIT"
+What is Google Cloud Platform?,baseline,,"Google Cloud Platform enables developers to build, test, and deploy applications on Google’s highly secure, reliable, and scalable infrastructure.","GCP,GCP,GCP"
+What is Google Cloud Platform?,grounded,,"Google Cloud Platform enables developers to build, test, and deploy applications on Google’s highly secure, reliable, and scalable infrastructure [Chunk 2].","GCP,GCP,GCP"
