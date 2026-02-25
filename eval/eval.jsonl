@@ -1,8 +1,8 @@
-{"id": "rag1", "query": "What is RAG?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["Retrieval-Augmented Generation", "retriever", "generator"]}
-{"id": "rag2", "query": "How does retrieval work with vectors?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["vector", "retrieve", "index"]}
-{"id": "rag3", "query": "What is chunking?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["chunking", "chunks", "splits"]}
-{"id": "rag4", "query": "Explain retrieval augmented generation in simple terms", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["RAG", "retrieval", "generation"]}
-{"id": "rag5", "query": "What is the role of context in RAG?", "topic": "RAG", "gold_sources": ["readme"], "gold_keywords": ["context", "chunks", "LLM"]}
+{"id": "rag1", "query": "What is RAG?", "topic": "RAG", "gold_sources": ["Pinecone", "LangChain"], "gold_keywords": ["Retrieval-Augmented Generation", "retriever", "generator"]}
+{"id": "rag2", "query": "How does retrieval work with vectors?", "topic": "RAG", "gold_sources": ["Pinecone", "LangChain"], "gold_keywords": ["vector", "retrieve", "index"]}
+{"id": "rag3", "query": "What is chunking?", "topic": "RAG", "gold_sources": ["Pinecone", "LangChain"], "gold_keywords": ["chunking", "chunks", "splits"]}
+{"id": "rag4", "query": "Explain retrieval augmented generation in simple terms", "topic": "RAG", "gold_sources": ["Pinecone", "LangChain"], "gold_keywords": ["RAG", "retrieval", "generation"]}
+{"id": "rag5", "query": "What is the role of context in RAG?", "topic": "RAG", "gold_sources": ["Pinecone", "LangChain"], "gold_keywords": ["context", "chunks", "LLM"]}
 {"id": "rag6", "query": "How do you index documents for retrieval?", "topic": "RAG", "gold_keywords": ["index", "vectors", "documents"]}
 {"id": "rag7", "query": "What is FAISS used for?", "topic": "RAG", "gold_keywords": ["FAISS", "vector", "search"]}
 {"id": "rag8", "query": "What are embeddings in a RAG pipeline?", "topic": "RAG", "gold_keywords": ["embed", "vector", "chunk"]}
