@@ -76,24 +76,29 @@ _COMPETITOR_PATTERNS: list[str] = [
 
 
 def _matches_any(text: str, patterns: list[str]) -> bool:
+    """Checks whether any pattern from the list appears in the lowercased text. Shared helper used by all keyword-based guardrail checks."""
     lower = text.lower()
     return any(p in lower for p in patterns)
 
 
 # Input guardrails — applied to the raw query before retrieval/generation.
 def check_pii(query: str) -> bool:
+    """Returns True if the query contains personal identifiable information keywords. Blocks queries that ask about email, phone, SSN, credit card, and similar data."""
     return _matches_any(query, _PII_KEYWORDS)
 
 
 def check_prompt_injection(query: str) -> bool:
+    """Returns True if the query contains prompt injection or jailbreak patterns. Blocks attempts to override system instructions or manipulate the model's behaviour."""
     return _matches_any(query, _INJECTION_PATTERNS)
 
 
 def check_toxicity(query: str) -> bool:
+    """Returns True if the query contains harmful or illegal request keywords. Blocks queries about hacking, weapons, hate speech, and similar content."""
     return _matches_any(query, _TOXICITY_KEYWORDS)
 
 
 def check_competitor_mentions(query: str) -> bool:
+    """Returns True if the query asks to compare with or switch to a competitor product. Blocks competitor comparison and recommendation requests."""
     return _matches_any(query, _COMPETITOR_PATTERNS)
 
 
@@ -102,14 +107,7 @@ def check_retrieval_quality(
     similarity_threshold: float = SIMILARITY_THRESHOLD,
     ambiguity_gap: float = AMBIGUITY_GAP,
 ) -> Tuple[bool, str | None]:
-    """
-    Validates retrieval scores before generation.
-
-    Returns (True, None) if scores pass all checks, or (False, reason) if:
-    - scores is empty -> EMPTY_RETRIEVAL
-    - top score is below similarity_threshold -> NO_CONTEXT
-    - gap between top-1 and top-2 is below ambiguity_gap -> AMBIGUOUS_RETRIEVAL
-    """
+    """Validates retrieval scores before passing context to the LLM. Returns (True, None) on pass, or (False, reason) if scores are empty, below the similarity threshold, or ambiguous."""
     if not scores:
         return False, REFUSAL_REASONS["EMPTY_RETRIEVAL"]
     if scores[0] < similarity_threshold:
@@ -121,6 +119,7 @@ def check_retrieval_quality(
 
 # Output guardrail — applied to the generated answer before returning to the caller.
 def check_data_leakage(answer: str) -> bool:
+    """Returns True if the generated answer contains sensitive system or credential patterns. Blocks responses that accidentally expose API keys, system prompts, or internal paths."""
     # Patterns that leak system/config (aligned with week4 experiments).
     leakage_patterns = [
         "system prompt",
@@ -143,6 +142,7 @@ UNCERTAIN_PHRASES = (
 
 
 def check_generated_answer(answer: str) -> Tuple[bool, str | None]:
+    """Validates the generated answer for emptiness, data leakage, and uncertain language. Returns (True, None) on pass or (False, reason) on failure."""
     if not answer or not answer.strip():
         return False, REFUSAL_REASONS["EMPTY_ANSWER"]
     if "insufficient_context" in answer.lower():
@@ -172,10 +172,12 @@ def _pre_guardrails_block(query: str) -> Tuple[bool, str | None]:
 # Internal helpers
 # -----------------------------------------------------------------------------
 def _citation(ref: dict[str, Any]) -> str:
+    """Formats a chunk reference dict into a single-line citation string. Used to label retrieved chunks in the sources block appended to every answer."""
     return f"topic={ref['topic']} source={ref['source']} page={ref['page']} chunk_id={ref['chunk_id']}"
 
 
 def _format_context(chunks: list[tuple[Any, dict[str, Any], float]]) -> str:
+    """Formats a list of retrieved chunks into a numbered context block for the LLM prompt. Each entry is prefixed with its rank, score, and citation."""
     return "\n\n".join(
         f"[Chunk {rank}] (score={score:.4f}) {_citation(ref)}\n{chunk.text}"
         for rank, (chunk, ref, score) in enumerate(chunks, 1)
@@ -189,6 +191,7 @@ def _eval_hit_correct(
     gold_sources: list[str],
     gold_keywords: list[str],
 ) -> bool:
+    """Returns True if the retrieved chunk matches any of the provided gold criteria. Checks chunk_id, source substring, and keyword substring in that order."""
     if gold_chunk_ids and chunk.chunk_id in gold_chunk_ids:
         return True
     if gold_sources and any(gs.lower() in ref["source"].lower() for gs in gold_sources):
@@ -209,10 +212,12 @@ def _hit_mrr_scores(correct_ranks: list[int]) -> Tuple[float, float, float, floa
 
 
 def _mean(lst: list[float]) -> float:
+    """Returns the rounded mean of a float list, or 0.0 for an empty list."""
     return round(sum(lst) / len(lst), 4) if lst else 0.0
 
 
 def _grounded_prompt(context: str, query: str) -> str:
+    """Builds the system prompt that instructs the LLM to answer using only the retrieved context. Requires chunk citations and mandates INSUFFICIENT_CONTEXT when evidence is missing."""
     return (
         "You are a helpful assistant that answers questions using ONLY the provided context.\n\n"
         "Context:\n"
@@ -239,11 +244,7 @@ _NAV_KEYWORDS = {
 
 
 def _is_junk_chunk(text: str) -> bool:
-    """
-    Returns True if the chunk is navigation/menu/TOC noise that should be skipped.
-    Scraped PDFs often contain site nav bars and TOC entries that score well
-    against short queries but carry no real information for the LLM.
-    """
+    """Returns True if the chunk looks like navigation, menu, or TOC noise rather than document content. Filters out very short chunks, nav-bar keyword clusters, and chunks with very short average line length."""
     s = " ".join(text.split())  # normalize whitespace
     if len(s) < 80:
         return True
@@ -258,6 +259,7 @@ def _is_junk_chunk(text: str) -> bool:
 # -----------------------------------------------------------------------------
 @dataclass
 class DocumentChunk:
+    """Holds a single text chunk and its provenance metadata after splitting a PDF page."""
     chunk_id: int
     text: str
     source: str
@@ -272,10 +274,7 @@ class Monitor:
     """Generates a unique run directory and collects latency timings and JSON artifacts."""
 
     def __init__(self, run_root: str = RUNS_DIR) -> None:
-        """
-        Parameters:
-            run_root (str): Root directory under which the per-run folder is created.
-        """
+        """Creates a unique run directory under run_root and initialises the timings dict. Every Monitor instance isolates its JSON artifacts in a separate folder identified by a random ID."""
         self.run_id = uuid.uuid4().hex[:10]
         self.run_dir = Path(run_root) / self.run_id
         self.run_dir.mkdir(parents=True, exist_ok=True)
@@ -308,13 +307,7 @@ class VectorDatabase:
         chunk_overlap: int = CHUNK_OVERLAP,
         monitor: Monitor | None = None,
     ) -> None:
-        """
-        Parameters:
-            dim (int): Embedding dimension (hash features).
-            chunk_size (int): Max characters per chunk.
-            chunk_overlap (int): Character overlap between consecutive chunks.
-            monitor (Monitor | None): Timing/logging monitor; creates a new one if None.
-        """
+        """Initialises the HashingVectorizer, text splitter, and an empty FAISS index. Call update_database() to load PDFs and build the index before querying."""
         self.dim = dim
         self.chunk_size = chunk_size
         self.chunk_overlap = chunk_overlap
@@ -330,17 +323,12 @@ class VectorDatabase:
         self.index: faiss.IndexFlatIP | None = None
 
     def _embed(self, texts: list[str]) -> np.ndarray:
+        """Transforms a list of strings into a contiguous float32 numpy array using HashingVectorizer. Used for both document indexing and query embedding."""
         x = self.vectorizer.transform(texts).astype(np.float32).toarray()
         return np.ascontiguousarray(x)
 
     def _load_pages(self, data_path: str) -> list[dict[str, Any]]:
-        """
-        Walks data_path/<topic>/*.pdf and returns raw page records.
-        Skips corrupted PDFs with a warning instead of crashing.
-
-        Returns:
-            list[dict]: keys — text, source, topic, page.
-        """
+        """Walks data_path/<topic>/*.pdf and returns a flat list of page records with text, source, topic, and page keys. Skips corrupted PDFs with a printed warning instead of crashing."""
         root = Path(data_path)
         if not root.exists() or not root.is_dir():
             raise FileNotFoundError(f"Data path not found: {data_path}")
@@ -426,15 +414,7 @@ class VectorDatabase:
         top_k: int = TOP_K_DEFAULT,
         topic: str | None = None,
     ) -> list[tuple[DocumentChunk, dict[str, Any], float]]:
-        """
-        Returns top-k ranked chunks for query as list of (DocumentChunk, ref_dict, score).
-
-        Parameters:
-            query (str): Search query.
-            top_k (int): Number of results to return.
-            topic (str | None): If set, restrict results to chunks with this topic (folder name).
-                Search is done with a larger k then filtered; fewer than top_k may be returned.
-        """
+        """Embeds the query and returns top-k chunks ranked by inner product score as (DocumentChunk, ref_dict, score) tuples. Optionally filters to a single topic folder by fetching extra candidates and post-filtering."""
         if self.index is None or self.index.ntotal == 0:
             raise RuntimeError("Index is empty. Call update_database(path) first.")
 
@@ -486,14 +466,7 @@ class RAG:
         similarity_threshold: float = SIMILARITY_THRESHOLD,
         ambiguity_gap: float = AMBIGUITY_GAP,
     ) -> None:
-        """
-        Parameters:
-            vector_db (VectorDatabase): Populated vector store.
-            llm (Any | None): Any object with invoke(prompt: str) -> str.
-            monitor (Monitor | None): Defaults to vector_db.monitor.
-            similarity_threshold (float): Min score (inner product from IndexFlatIP) to accept a retrieval hit.
-            ambiguity_gap (float): Min score gap between top-1 and top-2 hits.
-        """
+        """Wires together a populated VectorDatabase and an LLM client into a single pipeline object. The llm can be None if only evaluate() will be called."""
         self.vector_db = vector_db
         self.llm = llm
         self.monitor = monitor or vector_db.monitor
@@ -510,6 +483,7 @@ class RAG:
         sources_block: str,
         raw: str | None = None,
     ) -> str:
+        """Logs the refusal to the generation debug file and returns a Blocked message string. Called whenever a pre- or post-generation guardrail fires."""
         self._write_generation_debug(query, "refused", stage, reason, scores, 0, model_name, raw)
         return f"Blocked ({stage}): {reason}\n\n{sources_block}"
 
@@ -538,6 +512,7 @@ class RAG:
         model_name: str,
         sources_block: str,
     ) -> str:
+        """Applies post-generation guardrails to the raw LLM output and returns the final answer string. Handles insufficient context, data leakage, and uncertain language cases."""
         answer_text = (raw_answer or "")
         answer_snippet = answer_text[:2000]
         if raw_answer and "insufficient_context" in raw_answer.lower():
@@ -586,41 +561,7 @@ class RAG:
         return self._process_answer(raw_answer, query, scores, len(prompt), model_name, sources_block)
 
     def evaluate(self, eval_path: str, top_k: int = 5, use_topic: bool = True) -> dict[str, Any]:
-        """
-        Runs retrieval-only evaluation over a JSONL file (no LLM generation).
-
-        Each line is a JSON object with:
-          - "query"           (required) — the search query
-          - "id"              (optional) — identifier passed through to failures list
-          - "topic"           (optional) — if set and use_topic=True, restrict retrieval to this topic (folder name)
-          - "gold_chunk_ids"  (optional) — list[int] of correct chunk_ids
-          - "gold_sources"    (optional) — list[str] substrings matched against ref["source"]
-          - "gold_keywords"   (optional) — list[str] substrings matched against chunk text
-
-        A retrieved hit is considered correct if ANY of the following matches (in order):
-          1. chunk_id is in gold_chunk_ids
-          2. ref["source"] contains any gold_sources entry (case-insensitive)
-          3. chunk text contains any gold_keywords entry (case-insensitive)
-
-        use_topic (bool): if True (default), use "topic" from each row when present to restrict retrieval; if False, ignore topic (global search). Use False to compare metrics without topic filtering.
-
-        Malformed JSON lines and lines with missing/empty query are skipped and counted
-        in "skipped".
-
-        Returns:
-          {
-            "n":          <int>   — number of evaluated queries,
-            "skipped":    <int>   — lines skipped due to bad format or missing query,
-            "hit@1_mean": <float>,
-            "hit@3_mean": <float>,
-            "hit@5_mean": <float>,
-            "mrr@5_mean": <float> — mean reciprocal rank within top-5,
-            "failures":   [{"id", "query", "top_sources", "top_chunk_ids"}]
-                          — queries where hit@5 == 0 and at least one gold field was present
-          }
-
-        Also writes the full report to 60_eval_report.json in the run directory.
-        """
+        """Runs retrieval-only evaluation over a JSONL file and returns hit@1/3/5 and MRR@5 metrics. Does not call the LLM — each query is scored against gold_chunk_ids, gold_sources, or gold_keywords."""
         path = Path(eval_path)
         if not path.is_file():
             raise FileNotFoundError(f"Eval file not found or not a file: {eval_path}")
