@@ -36,45 +36,65 @@ SIMILARITY_THRESHOLD = 0.20
 AMBIGUITY_GAP = 0.0
 
 REFUSAL_MESSAGE = "This query cannot be processed."
+REFUSAL_REASONS: dict[str, str] = {
+    "PROMPT_INJECTION": "Prompt injection detected.",
+    "TOXICITY": "Toxic content detected.",
+    "PII_DETECTED": "Personal information detected.",
+    "COMPETITOR_MENTION": "Competitor mention detected.",
+    "EMPTY_RETRIEVAL": "No documents retrieved.",
+    "NO_CONTEXT": "Retrieved context has insufficient relevance.",
+    "AMBIGUOUS_RETRIEVAL": "Retrieval results are ambiguous.",
+    "EMPTY_ANSWER": "Generated answer is empty.",
+    "DATA_LEAKAGE": "Response contains sensitive data.",
+    "UNCERTAIN_LANGUAGE": "Response expresses uncertainty instead of grounded facts.",
+}
 
 
 # -----------------------------------------------------------------------------
 # Guardrail functions
 # -----------------------------------------------------------------------------
+_PII_KEYWORDS: list[str] = [
+    "email", "phone", "ssn", "social security",
+    "credit card", "passport", "driver's license",
+    "address", "zip code", "date of birth",
+]
+_INJECTION_PATTERNS: list[str] = [
+    "ignore previous instructions", "ignore all instructions", "ignore the above",
+    "disregard previous", "forget your instructions", "you are now", "act as",
+    "pretend you are", "new instructions:", "system prompt:", "override:",
+    "jailbreak", "do anything now", "developer mode",
+]
+_TOXICITY_KEYWORDS: list[str] = [
+    "how to hack", "how to steal", "how to kill",
+    "make a bomb", "make a weapon", "illegal", "exploit vulnerability",
+    "bypass security", "break into", "hate speech", "slur",
+]
+_COMPETITOR_PATTERNS: list[str] = [
+    "compare with chatgpt", "better than gpt", "switch to openai", "use openai instead",
+    "compare with bard", "compare with gemini", "recommend competitor", "alternative product",
+]
+
+
+def _matches_any(text: str, patterns: list[str]) -> bool:
+    lower = text.lower()
+    return any(p in lower for p in patterns)
+
+
+# Input guardrails — applied to the raw query before retrieval/generation.
 def check_pii(query: str) -> bool:
-    pii_keywords = [
-        "email", "phone", "ssn", "social security",
-        "credit card", "passport", "driver's license",
-        "address", "zip code", "date of birth",
-    ]
-    return any(k in query.lower() for k in pii_keywords)
+    return _matches_any(query, _PII_KEYWORDS)
 
 
 def check_prompt_injection(query: str) -> bool:
-    injection_patterns = [
-        "ignore previous instructions", "ignore all instructions", "ignore the above",
-        "disregard previous", "forget your instructions", "you are now", "act as",
-        "pretend you are", "new instructions:", "system prompt:", "override:",
-        "jailbreak", "do anything now", "developer mode",
-    ]
-    return any(p in query.lower() for p in injection_patterns)
+    return _matches_any(query, _INJECTION_PATTERNS)
 
 
 def check_toxicity(query: str) -> bool:
-    toxicity_keywords = [
-        "how to hack", "how to steal", "how to kill",
-        "make a bomb", "make a weapon", "illegal", "exploit vulnerability",
-        "bypass security", "break into", "hate speech", "slur",
-    ]
-    return any(k in query.lower() for k in toxicity_keywords)
+    return _matches_any(query, _TOXICITY_KEYWORDS)
 
 
 def check_competitor_mentions(query: str) -> bool:
-    competitor_patterns = [
-        "compare with chatgpt", "better than gpt", "switch to openai", "use openai instead",
-        "compare with bard", "compare with gemini", "recommend competitor", "alternative product",
-    ]
-    return any(p in query.lower() for p in competitor_patterns)
+    return _matches_any(query, _COMPETITOR_PATTERNS)
 
 
 def check_retrieval_quality(
@@ -99,6 +119,7 @@ def check_retrieval_quality(
     return True, None
 
 
+# Output guardrail — applied to the generated answer before returning to the caller.
 def check_data_leakage(answer: str) -> bool:
     # Patterns that leak system/config (aligned with week4 experiments).
     leakage_patterns = [
@@ -178,12 +199,12 @@ def _eval_hit_correct(
 
 
 def _hit_mrr_scores(correct_ranks: list[int]) -> Tuple[float, float, float, float]:
-    """Returns (hit@1, hit@3, hit@5, mrr@5) for the given list of correct ranks."""
-    first = correct_ranks[0] if correct_ranks else None
-    hit1 = 1.0 if first == 1 else 0.0
-    hit3 = 1.0 if correct_ranks and min(correct_ranks) <= 3 else 0.0
-    hit5 = 1.0 if correct_ranks else 0.0
-    mrr = (1.0 / first if first else 0.0)
+    """Returns (hit@1, hit@3, hit@5, mrr@5) for the given list of correct ranks (ascending)."""
+    best = correct_ranks[0] if correct_ranks else None
+    hit1 = 1.0 if best == 1 else 0.0
+    hit3 = 1.0 if best is not None and best <= 3 else 0.0
+    hit5 = 1.0 if best is not None else 0.0
+    mrr = 1.0 / best if best else 0.0
     return (hit1, hit3, hit5, mrr)
 
 
@@ -436,10 +457,16 @@ class VectorDatabase:
             if len(out) >= top_k:
                 break
 
-        debug = [{"rank": r, "score": round(score, 4), "source": c.source, "topic": c.topic, "chunk_id": c.chunk_id}
-                 for r, (c, _, score) in enumerate(out, 1)]
+        debug = [
+            {"rank": r, "score": round(score, 4), "source": c.source, "topic": c.topic, "chunk_id": c.chunk_id}
+            for r, (c, _, score) in enumerate(out, 1)
+        ]
         self.monitor.write_json("30_retrieval_debug.json", {
-            "query": query, "top_k": top_k, "topic": topic, "results": debug, "timings": self.monitor.timings,
+            "query": query,
+            "top_k": top_k,
+            "topic": topic,
+            "results": debug,
+            "timings": self.monitor.timings,
         })
         self.monitor.write_json("90_timings.json", self.monitor.timings)
         return out
@@ -493,12 +520,12 @@ class RAG:
         if not hits:
             return "pre", REFUSAL_MESSAGE
         guard_ok, guard_reason = _pre_guardrails_block(query)
-        if not guard_ok and guard_reason:
+        if not guard_ok:
             return "pre", guard_reason
         retrieval_ok, retrieval_reason = check_retrieval_quality(
             scores, self.similarity_threshold, self.ambiguity_gap
         )
-        if not retrieval_ok and retrieval_reason:
+        if not retrieval_ok:
             return "pre", retrieval_reason
         return None, None
 
@@ -511,22 +538,23 @@ class RAG:
         model_name: str,
         sources_block: str,
     ) -> str:
+        answer_text = (raw_answer or "")
+        answer_snippet = answer_text[:2000]
         if raw_answer and "insufficient_context" in raw_answer.lower():
             self._write_generation_debug(
                 query, "insufficient_context", "final", "INSUFFICIENT_CONTEXT",
-                scores, prompt_len, model_name, (raw_answer or "")[:2000],
+                scores, prompt_len, model_name, answer_snippet,
             )
             return f"INSUFFICIENT_CONTEXT\n\n{sources_block}"
-        answer_ok, answer_reason = check_generated_answer(raw_answer or "")
+        answer_ok, answer_reason = check_generated_answer(answer_text)
         if not answer_ok and answer_reason:
             return self._refuse(
-                query, answer_reason, "post", scores, model_name, sources_block,
-                (raw_answer or "")[:2000],
+                query, answer_reason, "post", scores, model_name, sources_block, answer_snippet,
             )
         self._write_generation_debug(
-            query, "answer", "final", None, scores, prompt_len, model_name, (raw_answer or "")[:2000],
+            query, "answer", "final", None, scores, prompt_len, model_name, answer_snippet,
         )
-        return (raw_answer or "").rstrip() + "\n\n" + sources_block
+        return answer_text.rstrip() + "\n\n" + sources_block
 
     def retrieve(self, query: str, top_k: int = TOP_K_DEFAULT) -> str:
         """
